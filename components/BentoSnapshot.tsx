@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import React from "react";
+import { animate, motion, useInView, useReducedMotion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 import RevealHeading from "@/components/ui/RevealHeading";
 import Parallax from "@/components/ui/Parallax";
 import { PROJECTS } from "@/lib/projects";
@@ -37,10 +37,39 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-2 text-white/60">
       <span aria-hidden>✦</span>
-      <span className="text-[11px] uppercase tracking-[0.22em] font-mono">
+      <span className="text-xs md:text-[13px] uppercase tracking-[0.22em] font-mono">
         {children}
       </span>
     </div>
+  );
+}
+
+function ProjectCount() {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, amount: 0.5 });
+  const reduceMotion = useReducedMotion();
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!inView) return;
+    if (reduceMotion) {
+      setCount(PROJECTS.length);
+      return;
+    }
+    const animation = animate(0, PROJECTS.length, {
+      duration: 1.4,
+      ease: "easeOut",
+      onUpdate: (value) => setCount(Math.round(value)),
+    });
+    return () => animation.stop();
+  }, [inView, reduceMotion]);
+
+  return (
+    <span ref={ref} aria-label={`${PROJECTS.length} projects`}>
+      <span aria-hidden="true" className="inline-block min-w-[2ch] tabular-nums">
+        {reduceMotion ? PROJECTS.length : count}
+      </span>
+    </span>
   );
 }
 
@@ -62,7 +91,7 @@ function StackRow({
         {doubled.map((t, i) => (
           <span
             key={`${t}-${i}`}
-            className="whitespace-nowrap rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-white/70"
+            className="whitespace-nowrap rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-sm md:text-base text-white/70"
           >
             {t}
           </span>
@@ -105,7 +134,7 @@ export default function BentoSnapshot() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[210px]">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[minmax(210px,auto)]">
           {/* Journey - tall */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -115,11 +144,11 @@ export default function BentoSnapshot() {
             className="glass noise rounded-2xl p-6 md:p-7 lg:col-start-1 lg:row-start-1 lg:row-span-2 flex flex-col"
           >
             <SectionLabel>The journey</SectionLabel>
-            <ul className="mt-6 flex-1 flex flex-col justify-between">
+            <ul className="mt-6 flex-1 flex flex-col justify-between gap-5">
               {JOURNEY.map((j, i) => (
                 <li key={j.phase} className="relative pl-6">
                   <span
-                    className="absolute left-0 top-1.5 h-2 w-2 rounded-full"
+                    className="absolute left-0 top-2 h-2 w-2 rounded-full"
                     style={{
                       background:
                         i === JOURNEY.length - 1
@@ -127,8 +156,8 @@ export default function BentoSnapshot() {
                           : "rgba(255,255,255,0.4)",
                     }}
                   />
-                  <p className="text-white/90 text-sm font-medium">{j.phase}</p>
-                  <p className="text-white/60 text-xs leading-relaxed">
+                  <p className="text-white/90 text-base md:text-lg font-medium">{j.phase}</p>
+                  <p className="text-white/60 text-sm md:text-base leading-relaxed">
                     {j.note}
                   </p>
                 </li>
@@ -157,12 +186,12 @@ export default function BentoSnapshot() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="glass noise rounded-2xl p-6 md:p-7 lg:col-start-2 lg:row-start-2 flex flex-col justify-between"
+            className="glass noise rounded-2xl p-6 md:p-7 lg:col-start-2 lg:row-start-2 flex flex-col gap-3"
           >
             <SectionLabel>Selected work</SectionLabel>
             <div>
               <p className="font-display text-6xl md:text-7xl font-medium leading-none text-white">
-                {PROJECTS.length}
+                <ProjectCount />
               </p>
               <p className="mt-2 text-white/55 text-sm">
                 Products, prototypes & experiments
@@ -176,10 +205,10 @@ export default function BentoSnapshot() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="glass noise rounded-2xl p-6 md:p-7 lg:col-start-3 lg:row-start-2 flex flex-col justify-between"
+            className="glass noise rounded-2xl p-6 md:p-7 lg:col-start-3 lg:row-start-2 flex flex-col gap-3"
           >
             <SectionLabel>Operating principle</SectionLabel>
-            <p className="font-display text-2xl md:text-3xl leading-tight text-white/90 mt-6">
+            <p className="font-display text-2xl md:text-3xl leading-tight text-white/90">
               Systems scale.
               <br />
               Hacks don&apos;t.
@@ -196,7 +225,7 @@ export default function BentoSnapshot() {
           >
             <div>
               <SectionLabel>Reach me</SectionLabel>
-              <p className="mt-4 text-white/90 text-lg">
+              <p className="mt-4 text-white/90 text-xl md:text-2xl leading-relaxed">
                 Based in India, open to building globally.
               </p>
             </div>
