@@ -47,7 +47,7 @@ const SYSTEMS: Layer[] = [
     name: "Architecture & Performance",
     tagline: "System design & optimization",
     tech: ["Edge runtime", "CDN", "Caching", "Observability"],
-    appliedIn: "Every shipped project — landing pages to full-stack apps",
+    appliedIn: "Every shipped project - landing pages to full-stack apps",
     solves: "Modular boundaries, observable hot paths, predictable scaling",
     color: "#F59E0B",
   },
@@ -65,7 +65,7 @@ export default function SystemsStack() {
             className="font-display text-5xl font-medium uppercase tracking-[0.04em] text-white md:text-7xl"
           />
           <p className="mx-auto mt-5 max-w-xl text-lg text-white/60">
-            Four layers of the same craft — stacked the way I build them.
+            Four layers of the same craft - stacked the way I build them.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import MedicalInventoryThumbnail from "@/public/thumbnail/pharma-project.png"; // replace if needed
+import MedicalInventoryThumbnail from "@/public/thumbnail/generated/breit-med-inventory-cover-2026-10.webp"; // replace if needed
 
 // ---------------- PROJECT DATA ----------------
 

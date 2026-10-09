@@ -47,7 +47,7 @@ const SYSTEMS: SystemLayer[] = [
     name: "Architecture & Performance",
     technologies: ["Edge runtime", "CDN", "Caching", "Observability"],
     description: "System design & optimization",
-    usedIn: "Every shipped project — from landing pages to full-stack apps",
+    usedIn: "Every shipped project - from landing pages to full-stack apps",
     solved: "Modular boundaries, observable hot paths, predictable scaling",
     color: "#F59E0B"
   }

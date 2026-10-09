@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import ForgebotThumbnail from "@/public/thumbnail/Gemini_Generated_Image_x3yb9x3yb9x3yb9x.png";
+import ForgebotThumbnail from "@/public/thumbnail/generated/llm-forgebot-cover-2026-10.webp";
 
 // Project data structure
 const FORGEBOT_PROJECT = {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Exam-oriented AI platform that converts raw notes, PDFs, and PPTs into structured study kits. Case study by Haresh Sainaath.",
   alternates: { canonical: "/ai-study-hub" },
   openGraph: {
-    title: "AI Study Hub — Haresh Sainaath",
+    title: "AI Study Hub - Haresh Sainaath",
     description:
       "Exam-oriented AI platform that converts raw notes, PDFs, and PPTs into structured study kits.",
     url: "/ai-study-hub",

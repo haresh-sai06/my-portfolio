@@ -410,7 +410,7 @@ export default function SystemDial() {
         </div>
 
         <p className="text-center text-white/40 text-sm">
-          This is how real engineers reason about trade-offs — not just sliders.
+          This is how real engineers reason about trade-offs - not just sliders.
         </p>
       </div>
     </section>

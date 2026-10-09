@@ -14,6 +14,17 @@ const nextConfig = {
   async headers() {
     return [
       {
+        source: "/resume/:path*",
+        headers: [
+          { key: "Content-Type", value: "application/pdf" },
+          {
+            key: "Content-Disposition",
+            value: 'attachment; filename="Haresh_Sainaath_Resume.pdf"',
+          },
+          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+        ],
+      },
+      {
         source: "/frames/:path*",
         headers: [
           {

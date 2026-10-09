@@ -16,7 +16,9 @@ export default function CustomCursor() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const fine = window.matchMedia("(pointer: fine)").matches;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (!fine || reduce) return;
     setEnabled(true);
 
@@ -29,7 +31,7 @@ export default function CustomCursor() {
       const target = e.target as HTMLElement | null;
       if (!target) return;
       const hoverable = target.closest(
-        "a, button, [role='button'], [data-cursor], input, textarea"
+        "a, button, [role='button'], [data-cursor], input, textarea",
       );
       if (hoverable) {
         setHovering(true);
@@ -54,19 +56,21 @@ export default function CustomCursor() {
   return (
     <motion.div
       aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-[200] flex items-center justify-center rounded-full bg-white text-black font-mono uppercase"
+      className="pointer-events-none fixed left-0 top-0 z-[200] flex items-center justify-center rounded-full border border-white/60 font-mono uppercase text-white"
       style={{
         x: springX,
         y: springY,
         translateX: "-50%",
         translateY: "-50%",
-        mixBlendMode: "difference",
+        backgroundColor: hovering
+          ? "rgba(5, 5, 5, 0.18)"
+          : "rgba(255, 255, 255, 0.7)",
       }}
       animate={{
-        width: hovering ? 72 : 14,
-        height: hovering ? 72 : 14,
-        fontSize: hovering && label ? 10 : 0,
-        letterSpacing: hovering && label ? "0.18em" : "0em",
+        width: hovering && label ? 46 : hovering ? 28 : 8,
+        height: hovering && label ? 46 : hovering ? 28 : 8,
+        fontSize: hovering && label ? 8 : 0,
+        letterSpacing: hovering && label ? "0.08em" : "0em",
       }}
       transition={{ type: "spring", stiffness: 320, damping: 26 }}
     >

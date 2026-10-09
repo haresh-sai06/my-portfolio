@@ -1,349 +1,237 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
-import Image, { StaticImageData } from "next/image";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import RevealHeading from "@/components/ui/RevealHeading";
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  CATEGORIES,
+  PROJECTS,
+  Project,
+  formatProjectDate,
+} from "@/lib/projects";
+import ProjectArtwork from "@/components/ProjectArtwork";
 
-import ForgebotThumbnail from "@/public/thumbnail/Gemini_Generated_Image_x3yb9x3yb9x3yb9x.png";
-import StudyHubThumbnail from "@/public/thumbnail/AI-study-hub.png";
-import PodjamThumbnail from "@/public/thumbnail/podjam.png";
-import FamilyChatbotThumbnail from "@/public/thumbnail/family-chatbot.png";
-import EsportsThumbnail from "@/public/thumbnail/esports.png";
-import TimetableThumbnail from "@/public/thumbnail/timetable.png";
-import TripBharatThumbnail from "@/public/thumbnail/trip-bharat.png";
+const RECENT_PROJECT_COUNT = 9;
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, useGSAP);
+function cardLayout(position: number, count: number) {
+  const tablet = count % 2 === 1 && position === count - 1
+    ? "sm:col-span-2"
+    : "sm:col-span-1";
+  const desktop = count % 3 === 1 && position === count - 1
+    ? "lg:col-span-6"
+    : count % 3 === 2 && position >= count - 2
+      ? "lg:col-span-3"
+      : "lg:col-span-2";
+  return `${tablet} ${desktop}`;
 }
 
-interface Project {
-  id: string;
-  name: string;
-  summary: string;
-  thumbnail?: StaticImageData;
-  color: string;
-  externalUrl?: string;
-  isPrivate?: boolean;
-  tags?: string[];
-}
-
-const PROJECTS: Project[] = [
-  {
-    id: "llm-forgebot",
-    name: "LLM ForgeBot",
-    summary:
-      "Multi-purpose AI toolkit with LLM-powered automation and analytics.",
-    thumbnail: ForgebotThumbnail,
-    color: "#8B5CF6",
-    tags: ["LLM", "Next.js", "Automation"],
-  },
-  {
-    id: "ai-study-hub",
-    name: "AI Study Hub",
-    summary:
-      "Exam-oriented AI platform that turns raw notes, PDFs, and PPTs into structured study kits.",
-    thumbnail: StudyHubThumbnail,
-    color: "#22C55E",
-    tags: ["AI", "EdTech", "RAG"],
-  },
-  {
-    id: "podjam",
-    name: "PodJam",
-    summary:
-      "Real-time social music streaming where friends jam together in perfect sync.",
-    thumbnail: PodjamThumbnail,
-    color: "#8B5CF6",
-    tags: ["Real-time", "WebSockets"],
-  },
-  {
-    id: "family-chatbot",
-    name: "Family Chatbot",
-    summary:
-      "An emotionally intelligent AI companion that keeps families connected and supported.",
-    thumbnail: FamilyChatbotThumbnail,
-    color: "#EC4899",
-    tags: ["LLM", "Care"],
-  },
-  {
-    id: "esports-tournament",
-    name: "Esports Tournament",
-    summary:
-      "Full-stack platform for large-scale Free Fire tournaments with real-time updates and an admin dashboard.",
-    thumbnail: EsportsThumbnail,
-    color: "#3B82F6",
-    tags: ["Full-stack", "Real-time"],
-  },
-  {
-    id: "skct-timetable",
-    name: "SKCT Automated Timetable",
-    summary:
-      "Automated timetable generation that eliminates scheduling conflicts and optimizes resource allocation.",
-    thumbnail: TimetableThumbnail,
-    color: "#3B82F6",
-    tags: ["Optimization", "TypeScript"],
-  },
-  {
-    id: "trip-bharat",
-    name: "Trip Bharat",
-    summary:
-      "Full-stack app for managing and displaying trip schedules for students and faculty.",
-    thumbnail: TripBharatThumbnail,
-    color: "#3B82F6",
-    tags: ["Full-stack", "Travel"],
-  },
-  {
-    id: "win-clicky",
-    name: "Win-Clicky",
-    summary:
-      "Lightweight Windows automation utility in Rust — systems-level fluency outside the web stack.",
-    color: "#F97316",
-    externalUrl: "https://github.com/haresh-sai06/Win-Clicky",
-    tags: ["Rust", "Devtool"],
-  },
-  {
-    id: "hackaura",
-    name: "HackAura",
-    summary:
-      "Hackathon project built end-to-end under time pressure. Python core, focused scope, shipped.",
-    color: "#EAB308",
-    externalUrl: "https://github.com/haresh-sai06/HackAura",
-    tags: ["Python", "Hackathon"],
-  },
-  {
-    id: "voice-agents",
-    name: "Voice Agents",
-    summary:
-      "A line of conversational voice agents — including a dental clinic agent and a reusable setup pipeline.",
-    color: "#06B6D4",
-    isPrivate: true,
-    tags: ["Voice AI", "LLM"],
-  },
-  {
-    id: "stock-guardian",
-    name: "Stock Guardian",
-    summary:
-      "Personal-finance guardrail tool with watchlists, alerts, and a clean reporting surface.",
-    color: "#22C55E",
-    isPrivate: true,
-    tags: ["Finance", "TypeScript"],
-  },
-];
-
-const INTERNAL_ROUTES: Record<string, string> = {
-  "llm-forgebot": "/llm-forgebot",
-  "ai-study-hub": "/ai-study-hub",
-  "breit-med-inventory": "/pharma-project",
-  podjam: "/podjam-project",
-  "family-chatbot": "/family-chatbot",
-  "esports-tournament": "/esports-project",
-  "skct-timetable": "/timetable-project",
-  "trip-bharat": "/trip-bharat",
-};
-
-function ProjectCard({
-  project,
-  index,
-  onOpen,
-}: {
-  project: Project;
-  index: number;
-  onOpen: (p: Project) => void;
-}) {
-  const initials = project.name
-    .split(" ")
-    .map((w) => w[0])
-    .join("")
-    .slice(0, 3)
-    .toUpperCase();
-
+function ProjectCard({ project, index, layoutClass }: { project: Project; index: number; layoutClass: string }) {
+  const external = project.href.startsWith("https://");
   return (
-    <article
-      onClick={() => onOpen(project)}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          onOpen(project);
-        }
-      }}
-      role="button"
-      tabIndex={0}
-      data-cursor={project.isPrivate ? "PRIVATE" : "VIEW"}
-      className="group relative flex h-[60vh] w-[80vw] flex-shrink-0 cursor-pointer flex-col overflow-hidden rounded-2xl glass noise sm:w-[58vw] md:w-[46vw] lg:w-[34vw] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
-    >
-      {/* Media */}
-      <div className="relative h-1/2 w-full overflow-hidden">
-        {project.thumbnail ? (
-          <Image
-            src={project.thumbnail}
-            alt={project.name}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-            sizes="(max-width: 768px) 80vw, 34vw"
-          />
-        ) : (
-          <div
-            className="absolute inset-0 flex items-center justify-center font-display text-5xl tracking-wide text-white/80"
-            style={{
-              background: `linear-gradient(135deg, ${project.color}40, ${project.color}10 55%, #0a0a0a)`,
-            }}
-          >
-            {initials}
-          </div>
-        )}
-        <div className="absolute left-4 top-4 flex items-center gap-2">
-          <span className="rounded-full bg-black/50 px-2.5 py-1 font-mono text-[11px] text-white/80 backdrop-blur">
+    <article className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0b0d0b] transition-colors hover:border-white/25 ${layoutClass}`}>
+      <Link
+        href={project.href}
+        target={external ? "_blank" : undefined}
+        rel={external ? "noopener noreferrer" : undefined}
+        aria-label={`${project.isPrivate ? "Enquire about" : "Explore"} ${project.name}`}
+        data-cursor={project.isPrivate ? "ASK" : "VIEW"}
+        className="flex h-full flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[rgb(168,255,96)]"
+      >
+        <div className="relative aspect-[16/10] overflow-hidden border-b border-white/10">
+          <ProjectArtwork project={project} />
+          {project.thumbnail && (
+            <Image
+              src={project.thumbnail}
+              alt={`${project.name} project artwork`}
+              fill
+              sizes={`(max-width: 639px) 100vw, (max-width: 1023px) ${layoutClass.includes("sm:col-span-2") ? "100vw" : "50vw"}, ${layoutClass.includes("lg:col-span-6") ? "100vw" : layoutClass.includes("lg:col-span-3") ? "50vw" : "33vw"}`}
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          )}
+          <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/70 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-white/80">
+            {project.status}
+          </span>
+          <span className="absolute right-4 top-4 font-mono text-xs text-white/40">
             {String(index + 1).padStart(2, "0")}
           </span>
-          {project.isPrivate && (
-            <span className="rounded-full border border-white/20 bg-black/40 px-2.5 py-1 text-[10px] uppercase tracking-wider text-white/70 backdrop-blur">
-              Private
-            </span>
-          )}
-          {project.externalUrl && !project.isPrivate && (
-            <span className="rounded-full border border-white/20 bg-black/40 px-2.5 py-1 text-[10px] uppercase tracking-wider text-white/70 backdrop-blur">
-              GitHub
-            </span>
-          )}
         </div>
-      </div>
-
-      {/* Body */}
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display text-2xl font-medium uppercase tracking-wide text-white">
-          {project.name}
-        </h3>
-        <p className="mt-3 text-sm leading-relaxed text-white/60">
-          {project.summary}
-        </p>
-        <div className="mt-auto flex items-end justify-between pt-4">
-          <div className="flex flex-wrap gap-1.5">
-            {project.tags?.map((t) => (
+        <div className="flex flex-1 flex-col p-5 sm:p-6">
+          <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-wider text-white/45">
+            <span style={{ color: project.color }}>{project.category}</span>
+            {project.updatedAt && (
+              <time dateTime={project.updatedAt}>
+                {formatProjectDate(project.updatedAt)}
+              </time>
+            )}
+          </div>
+          <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+            {project.name}
+          </h3>
+          <p className="mb-6 mt-3 text-sm leading-relaxed text-white/60">
+            {project.summary}
+          </p>
+          <div className="mt-auto flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
               <span
-                key={t}
-                className="rounded border border-white/10 bg-white/[0.04] px-1.5 py-0.5 text-[10px] text-white/60"
+                key={tag}
+                className="rounded-md border border-white/10 px-2 py-1 text-[10px] text-white/60"
               >
-                {t}
+                {tag}
               </span>
             ))}
           </div>
-          <span className="flex items-center gap-1 text-sm text-white/70 transition-colors group-hover:text-white">
-            {project.externalUrl && !project.isPrivate ? "Repo" : "View"}
+          <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs text-white/75">
+            <span>
+              {project.isPrivate
+                ? "Enquire about this project"
+                : external
+                  ? "Explore source code"
+                  : "Explore project"}
+            </span>
             <span
               aria-hidden
-              className="transition-transform group-hover:translate-x-1"
+              className="text-lg transition-transform group-hover:translate-x-1"
             >
-              →
+              ↗
             </span>
-          </span>
+          </div>
         </div>
-      </div>
+      </Link>
     </article>
   );
 }
 
 export default function ProjectsGallery() {
-  const router = useRouter();
-  const sectionRef = useRef<HTMLElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  const openProject = (project: Project) => {
-    const internal = INTERNAL_ROUTES[project.id];
-    if (internal) {
-      router.push(internal);
-      return;
-    }
-    if (project.externalUrl) {
-      window.open(project.externalUrl, "_blank", "noopener,noreferrer");
-    }
-  };
-
-  useGSAP(
-    () => {
-      const track = trackRef.current;
-      const section = sectionRef.current;
-      if (!track || !section) return;
-
-      const mm = gsap.matchMedia();
-      mm.add(
-        "(min-width: 768px) and (prefers-reduced-motion: no-preference)",
-        () => {
-          const getScroll = () =>
-            Math.max(0, track.scrollWidth - window.innerWidth + 96);
-          gsap.to(track, {
-            x: () => -getScroll(),
-            ease: "none",
-            scrollTrigger: {
-              trigger: section,
-              start: "top top",
-              end: () => `+=${getScroll()}`,
-              pin: true,
-              pinSpacing: true,
-              anticipatePin: 1,
-              scrub: 1,
-              invalidateOnRefresh: true,
-            },
-          });
-        }
-      );
-      return () => mm.revert();
-    },
-    { scope: sectionRef }
+  const [category, setCategory] = useState("All work");
+  const [query, setQuery] = useState("");
+  const [expanded, setExpanded] = useState(false);
+  const matches = PROJECTS.filter(
+    (project) =>
+      (category === "All work" || project.category === category) &&
+      `${project.name} ${project.summary} ${project.tags.join(" ")}`
+        .toLowerCase()
+        .includes(query.trim().toLowerCase()),
   );
-
-  // Late-loading thumbnails change the track width — recompute the pin so the
-  // horizontal scroll length stays correct and the section doesn't "jump".
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const refresh = () => ScrollTrigger.refresh();
-    window.addEventListener("load", refresh);
-    const imgs = trackRef.current?.querySelectorAll("img") ?? [];
-    imgs.forEach((img) => {
-      if (!img.complete) img.addEventListener("load", refresh, { once: true });
-    });
-    const t = window.setTimeout(refresh, 600);
-    return () => {
-      window.removeEventListener("load", refresh);
-      window.clearTimeout(t);
-    };
-  }, []);
-
+  const visible =
+    expanded || category !== "All work" || query.trim()
+      ? matches
+      : matches.slice(0, RECENT_PROJECT_COUNT);
   return (
     <section
       id="projects"
-      ref={sectionRef}
-      className="relative overflow-hidden bg-[#050505]"
+      className="relative scroll-mt-20 bg-[#050505] py-24 md:py-32"
     >
-      <div className="flex min-h-screen flex-col justify-center py-20">
-        {/* Heading rail */}
-        <div className="mx-auto mb-10 w-full max-w-7xl px-6 md:mb-14">
-          <p className="eyebrow mb-4">04 · Selected work</p>
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <RevealHeading
-              as="h2"
-              text="Things I've built"
-              className="font-display text-5xl font-medium uppercase tracking-[0.03em] text-white md:text-7xl"
-            />
-            <p className="hidden items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-white/50 md:flex">
-              Scroll <span aria-hidden>→</span>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p className="eyebrow mb-4">
+              Selected work · {PROJECTS.length} projects
             </p>
+            <h2 className="font-display text-5xl font-medium uppercase leading-none tracking-tight text-white md:text-7xl">
+              Ideas into
+              <br />
+              <span className="text-[rgb(168,255,96)]">working systems.</span>
+            </h2>
+          </div>
+          <div className="max-w-sm">
+            <p className="text-sm leading-relaxed text-white/60">
+              From spatial calling and applied ML to the everyday tools people
+              use. Recent work first, with the context and source behind it.
+            </p>
+            <a
+              href="https://github.com/haresh-sai06?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex gap-3 text-xs text-white/80 underline decoration-white/25 underline-offset-4"
+            >
+              Browse public repositories <span aria-hidden>↗</span>
+            </a>
           </div>
         </div>
-
-        {/* Horizontal track (pinned on desktop, swipeable on mobile) */}
-        <div className="w-full overflow-x-auto md:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="mb-8 flex flex-col justify-between gap-5 border-y border-white/10 py-5 lg:flex-row lg:items-center">
           <div
-            ref={trackRef}
-            className="flex w-max gap-5 pl-6 pr-6 md:gap-7 md:pl-12 md:pr-[38vw]"
+            role="group"
+            aria-label="Filter projects by category"
+            className="flex flex-wrap gap-2"
           >
-            {PROJECTS.map((p, i) => (
-              <ProjectCard key={p.id} project={p} index={i} onOpen={openProject} />
+            {CATEGORIES.map((item) => (
+              <button
+                key={item}
+                type="button"
+                aria-pressed={category === item}
+                onClick={() => {
+                  setCategory(item);
+                  setExpanded(false);
+                }}
+                className={`rounded-full border px-4 py-2 text-xs transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-white ${category === item ? "border-[rgb(168,255,96)] bg-[rgb(168,255,96)] text-black" : "border-white/15 text-white/60 hover:border-white/40 hover:text-white"}`}
+              >
+                {item}
+              </button>
             ))}
           </div>
+          <label className="flex items-center gap-3 rounded-full border border-white/15 px-4 py-2.5 text-white/50 focus-within:border-[rgb(168,255,96)] focus-within:ring-1 focus-within:ring-[rgb(168,255,96)]">
+            <span aria-hidden>⌕</span>
+            <span className="sr-only">Search projects or technologies</span>
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search projects or tech"
+              className="w-full bg-transparent text-xs text-white outline-none placeholder:text-white/40 lg:w-44"
+            />
+          </label>
         </div>
+        <p
+          role="status"
+          aria-live="polite"
+          className="mb-5 font-mono text-[10px] uppercase tracking-widest text-white/45"
+        >
+          Showing {visible.length} of {matches.length} projects
+        </p>
+        {visible.length ? (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
+            {visible.map((project, position) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={PROJECTS.indexOf(project)}
+                layoutClass={cardLayout(position, visible.length)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-2xl border border-white/10 p-10 text-center">
+            <h3 className="text-xl text-white">No matching projects</h3>
+            <p className="mt-3 text-sm text-white/60">
+              Try another name or technology, or return to the full collection.
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                setQuery("");
+                setCategory("All work");
+              }}
+              className="mt-6 rounded-full bg-[rgb(168,255,96)] px-5 py-3 text-sm text-black"
+            >
+              Show all work
+            </button>
+          </div>
+        )}
+        {category === "All work" && !query.trim() && matches.length > RECENT_PROJECT_COUNT && (
+          <div className="mt-10 text-center">
+            <button
+              type="button"
+              aria-expanded={expanded}
+              onClick={() => setExpanded(!expanded)}
+              className="rounded-full border border-white/20 px-7 py-3 text-sm text-white/80 hover:bg-white/5"
+            >
+              {expanded
+                ? "Show recent work"
+                : `Explore all ${PROJECTS.length} projects`}{" "}
+              <span aria-hidden>{expanded ? "↑" : "↓"}</span>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

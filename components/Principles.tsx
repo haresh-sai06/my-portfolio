@@ -16,7 +16,7 @@ const PRINCIPLES: Principle[] = [
   {
     id: "measurable",
     statement: "If it's not measurable, it's not done.",
-    explanation: "Performance metrics, user behavior, system health — everything quantified.",
+    explanation: "Performance metrics, user behavior, system health - everything quantified.",
     icon: "📊",
     systemVisual: "Performance graphs, monitoring dashboards, real-time metrics"
   },

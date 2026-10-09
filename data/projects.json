@@ -1,0 +1,374 @@
+[
+  {
+    "id": "livevolume",
+    "name": "LiveVolume",
+    "category": "AI & ML",
+    "status": "Hackathon prototype",
+    "featured": true,
+    "summary": "Spatial video calling that reconstructs callers as interactive 3D point clouds on Android.",
+    "overview": "Built for the iQOO Hackathon, LiveVolume combines on-device depth estimation, foreground segmentation, and OpenGL rendering to explore volumetric calling on consumer mobile hardware.",
+    "highlights": [
+      "MiDaS depth estimation and MediaPipe foreground segmentation",
+      "Touch-controlled 3D point clouds with a 2D / 3D call toggle",
+      "Agora audio, video, and chunked point-cloud transport",
+      "Firebase call invitations and incoming-call notifications"
+    ],
+    "tags": [
+      "Kotlin",
+      "TensorFlow Lite",
+      "OpenGL",
+      "Agora"
+    ],
+    "color": "#A8FF60",
+    "href": "/projects/livevolume",
+    "repository": "https://github.com/haresh-sai06/IQOO-Hackathon-LiveVolume",
+    "updatedAt": "2026-10-05T15:09:54Z",
+    "thumbnail": "/thumbnail/generated/livevolume-cover-2026-10.webp"
+  },
+  {
+    "id": "synapse-erp",
+    "name": "Synapse ERP",
+    "category": "AI & ML",
+    "status": "In development",
+    "featured": true,
+    "summary": "Converts handwritten ledgers, product photos, and informal orders into structured business records.",
+    "overview": "A multimodal OCR and deep-learning project for Indian MSMEs. A Next.js conversion desk and FastAPI backend turn existing offline records into inventory, customer records, invoices, and analytics. The repository distinguishes implemented workflows from model scaffolds and planned training.",
+    "highlights": [
+      "Handwritten ledger OCR architecture and training scaffold",
+      "Product recognition and code-mixed order extraction scaffolds",
+      "Structured inventory, CRM, invoice, and analytics output",
+      "Demand forecasting training script and background conversion jobs"
+    ],
+    "tags": [
+      "Python",
+      "OCR",
+      "Next.js",
+      "FastAPI"
+    ],
+    "color": "#B8A0FF",
+    "href": "/projects/synapse-erp",
+    "repository": "https://github.com/haresh-sai06/DL-Project-SynapseERP-",
+    "updatedAt": "2026-09-10T18:18:20Z",
+    "thumbnail": "/thumbnail/generated/synapse-erp-cover-2026-10.webp"
+  },
+  {
+    "id": "quantum-phase-oracle",
+    "name": "Quantum Phase Oracle",
+    "category": "Tools & Research",
+    "status": "Research experiment",
+    "summary": "A three-qubit Deutsch–Jozsa phase oracle for a balanced parity function, with its output distribution.",
+    "overview": "A focused quantum computing experiment that implements a balanced three-input Boolean function as a phase oracle. It documents the circuit's state transitions and computes the probability distribution over all eight output states.",
+    "highlights": [
+      "Balanced three-bit parity function",
+      "Hadamard–oracle–Hadamard circuit",
+      "Documented state evolution and output probabilities"
+    ],
+    "tags": [
+      "Python",
+      "Quantum computing",
+      "Algorithms"
+    ],
+    "color": "#74D9EF",
+    "href": "/projects/quantum-phase-oracle",
+    "repository": "https://github.com/haresh-sai06/quantum-dj-phase-oracle",
+    "updatedAt": "2026-09-08T06:34:24Z",
+    "thumbnail": "/thumbnail/generated/quantum-phase-oracle-cover-2026-10.webp"
+  },
+  {
+    "id": "crop-disease",
+    "name": "Crop Disease Concept Net",
+    "category": "AI & ML",
+    "status": "Research experiment",
+    "summary": "An interpretable crop disease model that connects leaf images to six visible symptom concepts.",
+    "overview": "Transfer learning with a Concept Bottleneck Network: a pretrained ResNet18 feeds a six-symptom concept layer and a 14-class disease head. Training and prediction scripts support the crop disease dataset and synthetic demo data.",
+    "highlights": [
+      "ResNet18 → symptom concepts → disease classification",
+      "Six concepts including rust patches, yellowing, and healthy tissue",
+      "Dataset split variants and a two-class comparison",
+      "Training, prediction, and synthetic demo-data scripts"
+    ],
+    "tags": [
+      "Python",
+      "ResNet18",
+      "Transfer learning"
+    ],
+    "color": "#82D8A0",
+    "href": "/projects/crop-disease",
+    "repository": "https://github.com/haresh-sai06/crop-disease-concept-net",
+    "updatedAt": "2026-08-29T04:44:20Z",
+    "thumbnail": "/thumbnail/generated/crop-disease-cover-2026-10.webp"
+  },
+  {
+    "id": "singlepass-studio",
+    "name": "Singlepass Studio",
+    "category": "Tools & Research",
+    "status": "Prototype",
+    "summary": "A drone reconstruction operator interface with a point-cloud viewer and observability shading.",
+    "overview": "An operator interface wireframe for single-pass drone 3D reconstruction, built around a brass-on-graphite visual system. The associated feasibility harness explores GPU capacity, metric scale, parallax, and scene visibility against synthetic ground truth.",
+    "highlights": [
+      "Point-cloud inspection and observability shading",
+      "Operator interface for a single-pass reconstruction workflow",
+      "Associated synthetic-scene feasibility experiments"
+    ],
+    "tags": [
+      "Python",
+      "3D reconstruction",
+      "Point clouds"
+    ],
+    "color": "#D5B57B",
+    "href": "/projects/singlepass-studio",
+    "repository": "https://github.com/haresh-sai06/singlepass-studio",
+    "updatedAt": "2026-08-28T05:57:21Z",
+    "thumbnail": "/thumbnail/generated/singlepass-studio-cover-2026-10.webp"
+  },
+  {
+    "id": "swiftbus",
+    "name": "SwiftBus",
+    "category": "Full-stack",
+    "status": "In development",
+    "summary": "A bus booking capstone with search, seat selection, bookings, and multilingual travel flows.",
+    "overview": "A RedBus-inspired full-stack capstone for the Internshala website-building track. The repository covers the traveller journey, community features, notifications, route planning, reviews, and English, Tamil, and Hindi interfaces. Payments use a stub.",
+    "highlights": [
+      "Search, seat selection, booking, and cancellation",
+      "Supabase authentication, data, and realtime services",
+      "Maps, route planning, and notification workflows",
+      "English, Tamil, and Hindi with persisted dark mode"
+    ],
+    "tags": [
+      "Next.js",
+      "Supabase",
+      "TypeScript",
+      "Leaflet"
+    ],
+    "color": "#FFAC7E",
+    "href": "/projects/swiftbus",
+    "repository": "https://github.com/haresh-sai06/swiftbus",
+    "updatedAt": "2026-08-20T04:43:14Z",
+    "thumbnail": "/thumbnail/generated/swiftbus-cover-2026-10.webp"
+  },
+  {
+    "id": "reliefstream",
+    "name": "ReliefStream",
+    "category": "AI & ML",
+    "status": "MVP",
+    "summary": "Centralizes flood rescue requests with AI extraction, deduplication, a map, and volunteer coordination.",
+    "overview": "A flood rescue coordination MVP for Code for Communities 2026. It turns scattered social-media text into prioritized requests and keeps ambiguous model output visible for a human operator to review.",
+    "highlights": [
+      "Structured location, urgency, and request-type extraction",
+      "Duplicate request grouping and severity-coded map pins",
+      "Volunteer assignment, resolution, and outcome logs",
+      "A human-review queue for ambiguous requests"
+    ],
+    "tags": [
+      "Python",
+      "FastAPI",
+      "Ollama",
+      "Leaflet"
+    ],
+    "color": "#7DCFFF",
+    "href": "/projects/reliefstream",
+    "repository": "https://github.com/haresh-sai06/reliefstream",
+    "updatedAt": "2026-08-18T10:47:17Z",
+    "thumbnail": "/thumbnail/generated/reliefstream-cover-2026-10.webp"
+  },
+  {
+    "id": "phalanx",
+    "name": "Phalanx",
+    "category": "Tools & Research",
+    "status": "Concept",
+    "summary": "A HackFusion concept for multi-persona agents that audit application flows, security, and usability.",
+    "overview": "A HackFusion 2026 Round 1 concept for autonomous QA. The proposed architecture combines simultaneous synthetic users, code-aware persona generation, and reproducible Playwright findings. Presented as a concept rather than a production service.",
+    "highlights": [
+      "Proposed multi-persona browser sessions",
+      "Cross-user permission and concurrency scenarios",
+      "Code-aware persona generation",
+      "Reproducible findings with Playwright scripts"
+    ],
+    "tags": [
+      "LangGraph",
+      "Playwright",
+      "MCP"
+    ],
+    "color": "#C8AEFF",
+    "href": "/projects/phalanx",
+    "repository": "https://github.com/haresh-sai06/phalanx",
+    "updatedAt": "2026-08-16T17:07:09Z",
+    "thumbnail": "/thumbnail/generated/phalanx-cover-2026-10.webp"
+  },
+  {
+    "id": "llm-forgebot",
+    "name": "LLM ForgeBot",
+    "summary": "Multi-purpose AI toolkit with LLM-powered automation and analytics.",
+    "category": "AI & ML",
+    "status": "Project case study",
+    "thumbnail": "/thumbnail/generated/llm-forgebot-cover-2026-10.webp",
+    "color": "#8B5CF6",
+    "tags": [
+      "LLM",
+      "Next.js",
+      "Automation"
+    ],
+    "href": "/llm-forgebot"
+  },
+  {
+    "id": "ai-study-hub",
+    "name": "AI Study Hub",
+    "summary": "Turns raw notes, PDFs, and presentations into structured, exam-oriented study kits.",
+    "category": "AI & ML",
+    "status": "Project case study",
+    "thumbnail": "/thumbnail/AI-study-hub.png",
+    "color": "#22C55E",
+    "tags": [
+      "AI",
+      "EdTech",
+      "RAG"
+    ],
+    "href": "/ai-study-hub"
+  },
+  {
+    "id": "breit-med-inventory",
+    "name": "Breit Med Inventory",
+    "summary": "Medical inventory workflows for medicines, suppliers, warehouses, purchases, and sales.",
+    "category": "Full-stack",
+    "status": "In development",
+    "thumbnail": "/thumbnail/generated/breit-med-inventory-cover-2026-10.webp",
+    "color": "#4FC4B6",
+    "tags": [
+      "React",
+      "Go",
+      "MySQL"
+    ],
+    "href": "/pharma-project"
+  },
+  {
+    "id": "podjam",
+    "name": "PodJam",
+    "summary": "Real-time social music streaming where friends listen and jam together in sync.",
+    "category": "Voice & Product",
+    "status": "Project case study",
+    "thumbnail": "/thumbnail/podjam.png",
+    "color": "#8B5CF6",
+    "tags": [
+      "Real-time",
+      "WebSockets"
+    ],
+    "href": "/podjam-project"
+  },
+  {
+    "id": "family-chatbot",
+    "name": "Family Chatbot",
+    "summary": "An AI companion designed to keep families connected and supported.",
+    "category": "AI & ML",
+    "status": "Project case study",
+    "thumbnail": "/thumbnail/family-chatbot.png",
+    "color": "#EC4899",
+    "tags": [
+      "LLM",
+      "Care"
+    ],
+    "href": "/family-chatbot"
+  },
+  {
+    "id": "esports-tournament",
+    "name": "Esports Tournament",
+    "summary": "Free Fire tournament management with real-time updates and an admin dashboard.",
+    "category": "Full-stack",
+    "status": "Project case study",
+    "thumbnail": "/thumbnail/esports.png",
+    "color": "#3B82F6",
+    "tags": [
+      "Full-stack",
+      "Real-time"
+    ],
+    "href": "/esports-project"
+  },
+  {
+    "id": "skct-timetable",
+    "name": "SKCT Automated Timetable",
+    "summary": "Automated timetable generation to resolve scheduling conflicts and allocate resources.",
+    "category": "Full-stack",
+    "status": "Project case study",
+    "thumbnail": "/thumbnail/generated/skct-timetable-cover-2026-10.webp",
+    "color": "#3B82F6",
+    "tags": [
+      "Optimization",
+      "TypeScript"
+    ],
+    "href": "/timetable-project"
+  },
+  {
+    "id": "trip-bharat",
+    "name": "Trip Bharat",
+    "summary": "Trip schedule management and a shared itinerary view for students and faculty.",
+    "category": "Full-stack",
+    "status": "Project case study",
+    "thumbnail": "/thumbnail/trip-bharat.png",
+    "color": "#3B82F6",
+    "tags": [
+      "Full-stack",
+      "Travel"
+    ],
+    "href": "/trip-bharat"
+  },
+  {
+    "id": "win-clicky",
+    "name": "Win-Clicky",
+    "summary": "A lightweight Windows automation utility written in Rust.",
+    "category": "Tools & Research",
+    "status": "Public repository",
+    "color": "#F97316",
+    "tags": [
+      "Rust",
+      "Windows",
+      "Automation"
+    ],
+    "href": "https://github.com/haresh-sai06/Win-Clicky",
+    "updatedAt": "2026-06-18T05:49:40Z",
+    "thumbnail": "/thumbnail/generated/win-clicky-cover-2026-10.webp"
+  },
+  {
+    "id": "hackaura",
+    "name": "HackAura",
+    "summary": "A Python hackathon project with source code available for exploration.",
+    "category": "Tools & Research",
+    "status": "Public repository",
+    "color": "#EAB308",
+    "tags": [
+      "Python",
+      "Hackathon"
+    ],
+    "href": "https://github.com/haresh-sai06/HackAura",
+    "updatedAt": "2026-02-24T15:05:16Z",
+    "thumbnail": "/thumbnail/generated/hackaura-cover-2026-10.webp"
+  },
+  {
+    "id": "voice-agents",
+    "name": "Voice Agents",
+    "summary": "Conversational voice agent work, including a dental clinic assistant and reusable setup pipeline.",
+    "category": "Voice & Product",
+    "status": "Private work",
+    "isPrivate": true,
+    "color": "#06B6D4",
+    "tags": [
+      "Voice AI",
+      "LLM"
+    ],
+    "href": "mailto:shareshsainaath@gmail.com?subject=Voice%20Agents%20project%20enquiry",
+    "thumbnail": "/thumbnail/generated/voice-agents-cover-2026-10.webp"
+  },
+  {
+    "id": "stock-guardian",
+    "name": "Stock Guardian",
+    "summary": "A personal-finance tool with watchlists, alerts, and reporting workflows.",
+    "category": "Voice & Product",
+    "status": "Private work",
+    "isPrivate": true,
+    "color": "#22C55E",
+    "tags": [
+      "Finance",
+      "TypeScript"
+    ],
+    "href": "mailto:shareshsainaath@gmail.com?subject=Stock%20Guardian%20project%20enquiry",
+    "thumbnail": "/thumbnail/generated/stock-guardian-cover-2026-10.webp"
+  }
+]

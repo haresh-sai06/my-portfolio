@@ -21,7 +21,7 @@ const THINKING_PATTERNS: ThinkingPattern[] = [
     question: "How do you approach performance?",
     bad: "Add caching later if needed",
     good: "Design for performance from day one",
-    reasoning: "Performance is not a feature — it's a foundation. Retroactive optimization costs 10x more.",
+    reasoning: "Performance is not a feature - it's a foundation. Retroactive optimization costs 10x more.",
     metrics: [
       { before: "Audit at the end", after: "Budget upfront", label: "Approach" },
       { before: "Reactive fixes", after: "Telemetry-first", label: "Optimization" }

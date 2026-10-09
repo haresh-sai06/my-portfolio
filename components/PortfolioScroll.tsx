@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Magnetic from "@/components/ui/Magnetic";
+import Image from "next/image";
 
 const FRAME_COUNT = 240;
 const IMAGES_DIR = "/frames/";
@@ -31,7 +32,7 @@ export default function PortfolioScroll() {
 
     const frameIndex = useTransform(scrollYProgress, [0, 1], [0, FRAME_COUNT - 1]);
 
-    // Preload frames — bug fix: progress now ticks on every settle (load OR error)
+    // Preload frames - bug fix: progress now ticks on every settle (load OR error)
     useEffect(() => {
         let cancelled = false;
         let loadedCount = 0;
@@ -47,9 +48,9 @@ export default function PortfolioScroll() {
         for (let i = 0; i < FRAME_COUNT; i++) {
             const img = new window.Image();
             img.decoding = "async";
-            img.src = IMAGES_DIR + IMAGE_NAME(i);
             img.onload = onSettle;
             img.onerror = onSettle;
+            img.src = IMAGES_DIR + IMAGE_NAME(i);
             imgArray[i] = img;
         }
 
@@ -73,7 +74,7 @@ export default function PortfolioScroll() {
 
         const renderFrame = (rawIndex: number) => {
             const index = Math.max(0, Math.min(FRAME_COUNT - 1, rawIndex));
-            const img = images[index];
+            const img = images[index]?.naturalWidth ? images[index] : images.find(image => image.complete && image.naturalWidth > 0);
             if (!img || !img.complete || img.naturalWidth === 0) return;
 
             const canvasAspect = canvas.width / canvas.height;
@@ -98,6 +99,7 @@ export default function PortfolioScroll() {
 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(img, offsetX, offsetY, renderW, renderH);
+            canvas.style.opacity = "1";
         };
 
         const updateSize = () => {
@@ -135,7 +137,7 @@ export default function PortfolioScroll() {
     }, [imagesLoaded, frameIndex]);
 
     return (
-        <div ref={containerRef} className="relative h-[400vh] bg-[#050505]">
+        <div id="top" ref={containerRef} className="relative h-[400vh] bg-[#050505]">
             <div className="sticky top-0 h-screen w-full overflow-hidden">
                 <AnimatePresence>
                     {!imagesLoaded && (
@@ -143,7 +145,7 @@ export default function PortfolioScroll() {
                             initial={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: shouldReduceMotion ? 0 : 0.4 }}
-                            className="absolute inset-0 z-50 flex items-center justify-center bg-[#050505] text-white/50 font-mono text-sm"
+                            className="absolute bottom-5 left-5 z-50 rounded-full border border-white/10 bg-black/50 px-3 py-2 text-white/50 font-mono text-[10px]"
                             role="status"
                             aria-live="polite"
                         >
@@ -152,9 +154,10 @@ export default function PortfolioScroll() {
                     )}
                 </AnimatePresence>
 
+                <Image src="/frames/ezgif-frame-001.jpg" alt="" fill priority sizes="100vw" className="object-cover" aria-hidden />
                 <canvas
                     ref={canvasRef}
-                    className="h-full w-full object-cover"
+                    className="relative h-full w-full object-cover opacity-0"
                     aria-label="Scroll-driven cinematic intro sequence"
                     role="img"
                 />
@@ -178,18 +181,19 @@ function TextOverlay({ progress }: { progress: MotionValue<number> }) {
         <div className="relative h-full w-full max-w-7xl mx-auto px-6 flex flex-col justify-center">
             <motion.div
                 className="absolute inset-x-0 text-center"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 0 }}
                 animate={{
                     opacity: scrollP < 0.15 ? 1 - scrollP * 6.67 : 0,
                     y: scrollP < 0.15 ? 0 : -20,
                 }}
                 transition={{ duration: 0.5 }}
             >
+                <p className="eyebrow mb-5 text-[rgb(168,255,96)]">Haresh Sainaath · AI & ML Engineering</p>
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white/90 mb-4">
                     I build systems.
                 </h1>
                 <p className="text-lg text-white/50 max-w-2xl mx-auto">
-                    Not just screens. Not just code. Systems that scale, think, and perform.
+                    Applied AI, spatial experiences, and full-stack products. Built with curiosity, engineered with intent.
                 </p>
             </motion.div>
 

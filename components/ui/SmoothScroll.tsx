@@ -14,7 +14,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      // Native scroll — ScrollTrigger still drives reveals against window scroll.
+      // Native scroll - ScrollTrigger still drives reveals against window scroll.
       ScrollTrigger.refresh();
       return;
     }

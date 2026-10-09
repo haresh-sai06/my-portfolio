@@ -2,10 +2,11 @@
 
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useState, useEffect, useRef } from "react";
+import { RESUME } from "@/lib/profile";
 
 export default function Closure() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [currentStatement, setCurrentStatement] = useState("");
+  const [currentStatement, setCurrentStatement] = useState("I make the complex feel simple.");
 
   useEffect(() => {
     const identityStatements = [
@@ -30,7 +31,7 @@ export default function Closure() {
   const contactLinks = [
     {
       label: "Resume",
-      href: "/resume/Haresh_Sainaath_Resume.pdf",
+      href: RESUME.href,
       description:
         "Experience, work & journey",
       icon: ResumeIcon,
@@ -106,7 +107,7 @@ export default function Closure() {
               <motion.a
                 key={link.label}
                 href={link.href}
-                download={link.download}
+                download={link.download ? RESUME.downloadName : undefined}
                 target={link.download ? undefined : "_blank"}
                 rel="noopener noreferrer"
                 data-cursor={link.download ? "OPEN" : "VISIT"}

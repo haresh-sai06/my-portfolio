@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
+import { PROJECTS } from "@/lib/projects";
 
-const BASE_URL = "https://haresh-sainaath.vercel.app";
+const BASE_URL = "https://haresh-sainaath.live";
 
 const ROUTES = [
   "",
@@ -12,6 +13,7 @@ const ROUTES = [
   "/esports-project",
   "/timetable-project",
   "/trip-bharat",
+  ...PROJECTS.filter(project => project.href.startsWith("/projects/")).map(project => project.href),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -98,7 +98,7 @@ export default function SpotlightReveal() {
         style={{ transformOrigin: "center", transform: interactive ? undefined : "scale(1.05)" }}
         aria-hidden
       >
-        {/* base — desaturated + dim */}
+        {/* base - desaturated + dim */}
         <div
           className="absolute inset-0"
           style={{
@@ -106,7 +106,7 @@ export default function SpotlightReveal() {
             filter: "grayscale(1) brightness(0.34) contrast(1.15)",
           }}
         />
-        {/* reveal — full colour, masked to the cursor */}
+        {/* reveal - full colour, masked to the cursor */}
         <div
           ref={revealRef}
           className="absolute inset-0"
@@ -145,7 +145,7 @@ export default function SpotlightReveal() {
           Systems beneath the surface
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-base text-white/70 md:text-lg">
-          Most people see the screen.{" "}
+          Behind every interface: the data, decisions, and engineering that make it work.
         </p>
       </div>
     </section>

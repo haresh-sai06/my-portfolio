@@ -22,7 +22,7 @@ const PATTERNS: Pattern[] = [
     common: "Add caching later, if it ever becomes a problem.",
     system: "Design for performance from day one.",
     reasoning:
-      "Performance is not a feature — it's a foundation. Retroactive optimization costs 10x more.",
+      "Performance is not a feature - it's a foundation. Retroactive optimization costs 10x more.",
     shifts: ["Audit at the end → Budget upfront", "Reactive fixes → Telemetry-first"],
   },
   {

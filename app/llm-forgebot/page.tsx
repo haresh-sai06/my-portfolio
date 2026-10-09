@@ -7,11 +7,11 @@ export const metadata: Metadata = {
     "Multi-purpose AI toolkit with LLM-powered automation and analytics. Case study by Haresh Sainaath.",
   alternates: { canonical: "/llm-forgebot" },
   openGraph: {
-    title: "LLM ForgeBot — Haresh Sainaath",
+    title: "LLM ForgeBot - Haresh Sainaath",
     description:
       "Multi-purpose AI toolkit with LLM-powered automation and analytics.",
     url: "/llm-forgebot",
-    images: ["/thumbnail/Gemini_Generated_Image_x3yb9x3yb9x3yb9x.png"],
+    images: ["/thumbnail/generated/llm-forgebot-cover-2026-10.webp"],
   },
 };
 

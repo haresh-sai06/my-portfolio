@@ -1,0 +1,132 @@
+{
+  "method": "Built-in ImageGen",
+  "preservedProjects": [
+    "esports-tournament",
+    "trip-bharat",
+    "family-chatbot",
+    "podjam",
+    "ai-study-hub"
+  ],
+  "covers": [
+    {
+      "project": "livevolume",
+      "cover": "/thumbnail/generated/livevolume-cover-2026-10.webp",
+      "original": "exec-16d7eecf-50ee-4820-925c-4c7c7e0dbfe9.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Spatial 3D video calling on Android: two elegant smartphone-shaped glass frames facing each other, a stylized anonymous human head-and-shoulders hologram reconstructed from thousands of small lime-green depth points between them, a subtle volumetric bridge connecting the frames. Strong luminous point cloud, selective lime green and pale teal, dark soft studio backdrop."
+    },
+    {
+      "project": "synapse-erp",
+      "cover": "/thumbnail/generated/synapse-erp-cover-2026-10.webp",
+      "original": "exec-305a4dec-d27c-4c1d-8ac4-eff6a4eb73de.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: OCR digitization for small Indian businesses: a realistic handwritten ledger book (scribbles only, no legible words) and a few modest product cartons, flowing through a luminous violet glass prism into neatly organized translucent inventory tiles and invoice sheets. Physical records transforming into structured digital records. Lavender and pale amber."
+    },
+    {
+      "project": "quantum-phase-oracle",
+      "cover": "/thumbnail/generated/quantum-phase-oracle-cover-2026-10.webp",
+      "original": "exec-9475ae83-9f21-41d4-8373-5b2a21928aae.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: A three-qubit quantum algorithm: three suspended luminous cyan glass qubit spheres passing through a precisely arranged series of translucent square optical gates on an elegant dark scientific laboratory plinth; interference ripples resolve into a single bright output beam. Three-qubit structure clearly visible, restrained ice blue and silver."
+    },
+    {
+      "project": "crop-disease",
+      "cover": "/thumbnail/generated/crop-disease-cover-2026-10.webp",
+      "original": "exec-ac6b378c-c808-4a72-bc0e-91de1747213e.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Interpretable crop disease detection: a single richly textured crop leaf with visible rust spots and yellowing under a suspended translucent scanning lens, fine diagnostic light traces connect real visible symptoms to six small softly glowing concept nodes. Botanical science editorial 3D scene, fresh green, warm rust, muted ivory."
+    },
+    {
+      "project": "singlepass-studio",
+      "cover": "/thumbnail/generated/singlepass-studio-cover-2026-10.webp",
+      "original": "exec-8ba3820f-b9ae-4042-aaa7-740bb579bc9e.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Drone 3D reconstruction: a compact professional quadcopter above a miniature terrain block and small building, one sweeping golden camera ray converts half the building into a detailed brass and teal point cloud while half stays physically solid. Graphite studio setting, believable reconstruction geometry, warm brass and cool teal."
+    },
+    {
+      "project": "swiftbus",
+      "cover": "/thumbnail/generated/swiftbus-cover-2026-10.webp",
+      "original": "exec-181e2158-6e7c-455c-8e47-84492b5e48a6.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Bus booking across India: a sleek intercity coach on a miniature elevated winding road crossing a softly rendered landscape map, a few softly luminous route pins and a small ticket-shaped glass object nearby. Clean travel product editorial image, warm coral and amber, graphite base, dignified real-world coach rather than toy mascot."
+    },
+    {
+      "project": "reliefstream",
+      "cover": "/thumbnail/generated/reliefstream-cover-2026-10.webp",
+      "original": "exec-bed62dca-b108-41e4-b620-abb8288ef7d4.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Flood rescue request coordination: a carefully composed isometric flooded neighborhood terrain model, clusters of soft blue location beacons connected to a central translucent coordination map panel, a tiny orange rescue boat navigating a clear route. Humane calm design, no distressed people or disasters depicted graphically. Ice blue with restrained rescue-orange accents."
+    },
+    {
+      "project": "phalanx",
+      "cover": "/thumbnail/generated/phalanx-cover-2026-10.webp",
+      "original": "exec-32cfe36b-fca3-490e-91ea-165480ee63c3.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Multi-persona QA and security testing concept: a formation of three distinct translucent violet browser-window frames surrounding a precise central shield-shaped glass core, small coordinated inspection beams checking interconnected paths and a tiny flaw becoming illuminated. Architectural teamwork metaphor, elegant lavender, blue and soft white, no robots or text."
+    },
+    {
+      "project": "llm-forgebot",
+      "cover": "/thumbnail/generated/llm-forgebot-cover-2026-10.webp",
+      "original": "exec-6dee7f37-2ea9-438b-b9e7-84f355e25aab.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Multi-purpose AI automation toolkit: a sculptural dark metal forge apparatus holding a luminous violet intelligence core, neat modular tool-shaped glass blocks orbiting the core along organized rails, a precise soft stream of light connecting input modules and output modules. Premium industrial design rather than fantasy weapon, violet and pale green."
+    },
+    {
+      "project": "breit-med-inventory",
+      "cover": "/thumbnail/generated/breit-med-inventory-cover-2026-10.webp",
+      "original": "exec-275bf2b2-93ae-4a0a-9d2b-4debddbf8451.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Medical inventory management: impeccably arranged medicine cartons, sealed pill bottles, and a small warehouse rack with organized supplies, translucent teal inventory compartments and a delicate light path linking a shipment box to storage. Clinical precision, white matte packaging with no text, dark graphite, restrained mint teal."
+    },
+    {
+      "project": "skct-timetable",
+      "cover": "/thumbnail/generated/skct-timetable-cover-2026-10.webp",
+      "original": "exec-f860a9e9-9dda-4cc7-b204-acff5fc38158.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Conflict-free college timetable scheduling: an elegant upright translucent weekly calendar grid with blank cells, colored class blocks fitting into orderly slots, a small campus architectural model and a precise clock dial without numbers, structured puzzle-like scheduling metaphor. Sky blue, clean silver, graphite tabletop."
+    },
+    {
+      "project": "win-clicky",
+      "cover": "/thumbnail/generated/win-clicky-cover-2026-10.webp",
+      "original": "exec-a4e611ab-69f0-4ef4-8eb7-2d86e8c53199.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Lightweight Windows automation in Rust: a precise sculptural computer mouse on a graphite desktop with a single warm-orange illuminated click ring; crisp translucent repeated click paths organize into a neat sequence of action blocks behind it. Industrial materials, brushed metal and amber glass, recognizable mouse, no Windows logo or text."
+    },
+    {
+      "project": "hackaura",
+      "cover": "/thumbnail/generated/hackaura-cover-2026-10.webp",
+      "original": "exec-775ed33b-23a8-4748-bb4d-9af310d4c435.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: A Python hackathon software project: a portable laptop-like dark sculptural frame with a luminous warm-gold geometric core, a small set of interlocking modular code-building blocks arranged like a rapid prototype, a subtle timing ring as an abstract deadline motif. Tactile engineering table, amber and muted violet, no language logos, no unverified domain-specific features."
+    },
+    {
+      "project": "voice-agents",
+      "cover": "/thumbnail/generated/voice-agents-cover-2026-10.webp",
+      "original": "exec-03b15b06-5e17-47b2-a010-4b94594f679a.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Conversational voice assistants including a dental clinic workflow: an elegant silver microphone beside a translucent cyan speech-wave ribbon, the wave connects to a simple clinic appointment tile and a small clean dental mirror instrument in the background. Warm professional human-facing product mood, cyan and soft ivory, no people or lettering."
+    },
+    {
+      "project": "stock-guardian",
+      "cover": "/thumbnail/generated/stock-guardian-cover-2026-10.webp",
+      "original": "exec-6ef05f64-a119-4738-9285-4320126a6ca7.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Personal finance watchlists and alerts: a solid translucent emerald shield standing in front of a restrained glass financial trend line and organized watchlist-like geometric cards, a small softly glowing notification beacon. Carefully balanced graph includes rises and dips, no exaggerated guaranteed profit symbolism, no currency logos, dark emerald and brushed silver."
+    }
+  ]
+}

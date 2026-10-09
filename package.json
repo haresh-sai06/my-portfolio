@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run check:content && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:content": "node scripts/check-content.mjs",
+    "refresh:github": "node scripts/refresh-github.mjs"
   },
   "dependencies": {
-    "@next/swc-win32-x64-msvc": "^14.2.14",
     "@gsap/react": "^2.1.2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.27.0",

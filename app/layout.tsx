@@ -26,17 +26,17 @@ const oswald = Oswald({
   display: "swap",
 });
 
-const siteUrl = "https://haresh-sainaath.vercel.app";
+const siteUrl = "https://haresh-sainaath.live";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Haresh Sainaath — Systems-first Engineer",
+    default: "Haresh Sainaath - Systems-first Engineer",
     template: "%s · Haresh Sainaath",
   },
   description:
-    "Portfolio of Haresh Sainaath — AI & ML engineering student building scalable systems with Next.js, React, and modern web tech. Performance-driven, design-aware, product-minded.",
-  applicationName: "Haresh Sainaath — Portfolio",
+    "Portfolio of Haresh Sainaath - AI & ML engineering student building scalable systems with Next.js, React, and modern web tech. Performance-driven, design-aware, product-minded.",
+  applicationName: "Haresh Sainaath - Portfolio",
   authors: [{ name: "Haresh Sainaath" }],
   creator: "Haresh Sainaath",
   publisher: "Haresh Sainaath",
@@ -54,17 +54,17 @@ export const metadata: Metadata = {
   ],
   category: "technology",
   openGraph: {
-    title: "Haresh Sainaath — Systems-first Engineer",
+    title: "Haresh Sainaath - Systems-first Engineer",
     description:
       "Building scalable systems, not just screens. Performance-driven engineering with Next.js, React, and modern web technologies.",
     url: siteUrl,
     siteName: "Haresh Sainaath",
     images: [
       {
-        url: "/thumbnail/Gemini_Generated_Image_x3yb9x3yb9x3yb9x.png",
+        url: "/thumbnail/generated/llm-forgebot-cover-2026-10.webp",
         width: 1200,
         height: 630,
-        alt: "Haresh Sainaath — Systems-first Engineer",
+        alt: "Haresh Sainaath - Systems-first Engineer",
       },
     ],
     locale: "en_US",
@@ -72,10 +72,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Haresh Sainaath — Systems-first Engineer",
+    title: "Haresh Sainaath - Systems-first Engineer",
     description:
       "Building scalable systems, not just screens. Performance-driven engineering with Next.js, React, and modern web technologies.",
-    images: ["/thumbnail/Gemini_Generated_Image_x3yb9x3yb9x3yb9x.png"],
+    images: ["/thumbnail/generated/llm-forgebot-cover-2026-10.webp"],
   },
   robots: {
     index: true,

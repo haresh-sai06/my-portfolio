@@ -7,11 +7,11 @@ export const metadata: Metadata = {
     "Production-grade medical inventory management system with normalized APIs, secure auth, and full CRUD workflows. Case study by Haresh Sainaath.",
   alternates: { canonical: "/pharma-project" },
   openGraph: {
-    title: "Breit Med Inventory — Haresh Sainaath",
+    title: "Breit Med Inventory - Haresh Sainaath",
     description:
       "Production-grade medical inventory management with normalized APIs and full CRUD workflows.",
     url: "/pharma-project",
-    images: ["/thumbnail/pharma-project.png"],
+    images: ["/thumbnail/generated/breit-med-inventory-cover-2026-10.webp"],
   },
 };
 

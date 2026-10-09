@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Haresh Sainaath — Systems-first Engineer",
+    name: "Haresh Sainaath - Systems-first Engineer",
     short_name: "Haresh Sainaath",
     description:
-      "Portfolio of Haresh Sainaath — AI & ML engineering student building scalable systems.",
+      "Portfolio of Haresh Sainaath - AI & ML engineering student building scalable systems.",
     start_url: "/",
     display: "standalone",
     background_color: "#050505",

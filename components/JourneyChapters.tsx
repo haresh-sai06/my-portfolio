@@ -15,7 +15,7 @@ const STAGES: Stage[] = [
   {
     id: "curiosity",
     title: "Curiosity",
-    desc: "I wanted to understand how things worked — so I took them apart.",
+    desc: "I wanted to understand how things worked - so I took them apart.",
     color: "#3B82F6",
   },
   {

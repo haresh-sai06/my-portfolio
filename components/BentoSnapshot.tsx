@@ -1,14 +1,10 @@
 "use client";
 
-import {
-  animate,
-  motion,
-  useInView,
-  useReducedMotion,
-} from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import React from "react";
 import RevealHeading from "@/components/ui/RevealHeading";
 import Parallax from "@/components/ui/Parallax";
+import { PROJECTS } from "@/lib/projects";
 
 const JOURNEY = [
   { phase: "Curiosity", note: "Understanding how things actually work" },
@@ -48,29 +44,6 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-function CountUp({ to, duration = 1.6 }: { to: number; duration?: number }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-20%" });
-  const reduce = useReducedMotion();
-  const [val, setVal] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-    if (reduce) {
-      setVal(to);
-      return;
-    }
-    const controls = animate(0, to, {
-      duration,
-      ease: "easeOut",
-      onUpdate: (v) => setVal(Math.round(v)),
-    });
-    return () => controls.stop();
-  }, [inView, to, duration, reduce]);
-
-  return <span ref={ref}>{val}</span>;
-}
-
 function StackRow({
   items,
   dir,
@@ -105,7 +78,7 @@ export default function BentoSnapshot() {
       id="snapshot"
       className="relative overflow-hidden bg-[#050505] py-24 md:py-32"
     >
-      {/* GSAP parallax depth layer — drifts slower than the content */}
+      {/* GSAP parallax depth layer - drifts slower than the content */}
       <Parallax
         speed={0.5}
         className="pointer-events-none absolute inset-x-0 top-0 z-0 flex justify-center"
@@ -133,7 +106,7 @@ export default function BentoSnapshot() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[210px]">
-          {/* Journey — tall */}
+          {/* Journey - tall */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -163,22 +136,22 @@ export default function BentoSnapshot() {
             </ul>
           </motion.div>
 
-          {/* Tech stack — wide */}
+          {/* Tech stack - wide */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 0.7, delay: 0.05 }}
-            className="glass noise rounded-2xl p-6 md:p-7 lg:col-start-2 lg:col-span-2 lg:row-start-1 flex flex-col justify-between"
+            className="glass noise rounded-2xl p-6 md:p-7 lg:col-start-2 lg:col-span-2 lg:row-start-1 flex flex-col"
           >
             <SectionLabel>Daily stack</SectionLabel>
-            <div className="mt-6 space-y-3">
+            <div className="mt-4 space-y-3">
               <StackRow items={STACK_TOP} dir="left" />
               <StackRow items={STACK_BOTTOM} dir="right" />
             </div>
           </motion.div>
 
-          {/* Stat — repos */}
+          {/* Stat - repos */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -186,14 +159,13 @@ export default function BentoSnapshot() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="glass noise rounded-2xl p-6 md:p-7 lg:col-start-2 lg:row-start-2 flex flex-col justify-between"
           >
-            <SectionLabel>Shipped</SectionLabel>
+            <SectionLabel>Selected work</SectionLabel>
             <div>
               <p className="font-display text-6xl md:text-7xl font-medium leading-none text-white">
-                <CountUp to={64} />
-                <span className="text-[rgb(168,255,96)]">+</span>
+                {PROJECTS.length}
               </p>
               <p className="mt-2 text-white/55 text-sm">
-                Repositories — products, tools & experiments
+                Products, prototypes & experiments
               </p>
             </div>
           </motion.div>
@@ -214,7 +186,7 @@ export default function BentoSnapshot() {
             </p>
           </motion.div>
 
-          {/* Reach me — full width */}
+          {/* Reach me - full width */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -225,7 +197,7 @@ export default function BentoSnapshot() {
             <div>
               <SectionLabel>Reach me</SectionLabel>
               <p className="mt-4 text-white/90 text-lg">
-                Based in India — open to building globally.
+                Based in India, open to building globally.
               </p>
             </div>
             <a

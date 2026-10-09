@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import TimetableThumbnail from "@/public/thumbnail/timetable.png"; // Replace with your actual timetable project thumbnail
+import TimetableThumbnail from "@/public/thumbnail/generated/skct-timetable-cover-2026-10.webp"; // Replace with your actual timetable project thumbnail
 
 // SKCT College Timetable Management System Project Data
 const SKCT_TIMETABLE_PROJECT = {

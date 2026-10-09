@@ -19,7 +19,7 @@ const PORTRAIT_IMAGES = [
 const PORTRAIT_TEXTS = [
   {
     heading: "Haresh Sainaath",
-    subheading: "20\nIndia\nAI & ML Engineering Student",
+    subheading: "India\nAI & ML Engineering Student",
     isName: true
   },
   {
@@ -77,12 +77,12 @@ export default function PortraitScroll() {
   const activeIndex = useTransform(smoothedProgress, [0, 1], [0, PORTRAIT_COUNT - 1]);
 
   // Calculate transforms for each portrait - individual hooks
-  const portraitOpacity0 = useTransform(smoothedProgress, [0 - 0.1, 0, 0 + 0.1], [0, 1, 0]);
-  const portraitOpacity1 = useTransform(smoothedProgress, [1 / 6 - 0.1, 1 / 6, 1 / 6 + 0.1], [0, 1, 0]);
-  const portraitOpacity2 = useTransform(smoothedProgress, [2 / 6 - 0.1, 2 / 6, 2 / 6 + 0.1], [0, 1, 0]);
-  const portraitOpacity3 = useTransform(smoothedProgress, [3 / 6 - 0.1, 3 / 6, 3 / 6 + 0.1], [0, 1, 0]);
-  const portraitOpacity4 = useTransform(smoothedProgress, [4 / 6 - 0.1, 4 / 6, 4 / 6 + 0.1], [0, 1, 0]);
-  const portraitOpacity5 = useTransform(smoothedProgress, [5 / 6 - 0.1, 5 / 6, 5 / 6 + 0.1], [0, 1, 0]);
+  const portraitOpacity0 = useTransform(smoothedProgress, [0 - 0.2, 0 - 0.025, 0 + 0.025, 0 + 0.2], [0, 1, 1, 0]);
+  const portraitOpacity1 = useTransform(smoothedProgress, [1 / 5 - 0.2, 1 / 5 - 0.025, 1 / 5 + 0.025, 1 / 5 + 0.2], [0, 1, 1, 0]);
+  const portraitOpacity2 = useTransform(smoothedProgress, [2 / 5 - 0.2, 2 / 5 - 0.025, 2 / 5 + 0.025, 2 / 5 + 0.2], [0, 1, 1, 0]);
+  const portraitOpacity3 = useTransform(smoothedProgress, [3 / 5 - 0.2, 3 / 5 - 0.025, 3 / 5 + 0.025, 3 / 5 + 0.2], [0, 1, 1, 0]);
+  const portraitOpacity4 = useTransform(smoothedProgress, [4 / 5 - 0.2, 4 / 5 - 0.025, 4 / 5 + 0.025, 4 / 5 + 0.2], [0, 1, 1, 0]);
+  const portraitOpacity5 = useTransform(smoothedProgress, [5 / 5 - 0.2, 5 / 5 - 0.025, 5 / 5 + 0.025, 5 / 5 + 0.2], [0, 1, 1, 0]);
 
   const portraitOpacities = [portraitOpacity0, portraitOpacity1, portraitOpacity2, portraitOpacity3, portraitOpacity4, portraitOpacity5];
 
@@ -92,11 +92,11 @@ export default function PortraitScroll() {
 
   // Calculate scale for each portrait - individual hooks
   const portraitScale0 = useTransform(smoothedProgress, [0 - 0.05, 0, 0 + 0.05], [1, SCALE_RANGE[1], 1]);
-  const portraitScale1 = useTransform(smoothedProgress, [1 / 6 - 0.05, 1 / 6, 1 / 6 + 0.05], [1, SCALE_RANGE[1], 1]);
-  const portraitScale2 = useTransform(smoothedProgress, [2 / 6 - 0.05, 2 / 6, 2 / 6 + 0.05], [1, SCALE_RANGE[1], 1]);
-  const portraitScale3 = useTransform(smoothedProgress, [3 / 6 - 0.05, 3 / 6, 3 / 6 + 0.05], [1, SCALE_RANGE[1], 1]);
-  const portraitScale4 = useTransform(smoothedProgress, [4 / 6 - 0.05, 4 / 6, 4 / 6 + 0.05], [1, SCALE_RANGE[1], 1]);
-  const portraitScale5 = useTransform(smoothedProgress, [5 / 6 - 0.05, 5 / 6, 5 / 6 + 0.05], [1, SCALE_RANGE[1], 1]);
+  const portraitScale1 = useTransform(smoothedProgress, [1 / 5 - 0.05, 1 / 5, 1 / 5 + 0.05], [1, SCALE_RANGE[1], 1]);
+  const portraitScale2 = useTransform(smoothedProgress, [2 / 5 - 0.05, 2 / 5, 2 / 5 + 0.05], [1, SCALE_RANGE[1], 1]);
+  const portraitScale3 = useTransform(smoothedProgress, [3 / 5 - 0.05, 3 / 5, 3 / 5 + 0.05], [1, SCALE_RANGE[1], 1]);
+  const portraitScale4 = useTransform(smoothedProgress, [4 / 5 - 0.05, 4 / 5, 4 / 5 + 0.05], [1, SCALE_RANGE[1], 1]);
+  const portraitScale5 = useTransform(smoothedProgress, [5 / 5 - 0.05, 5 / 5, 5 / 5 + 0.05], [1, SCALE_RANGE[1], 1]);
 
   const portraitScales = [portraitScale0, portraitScale1, portraitScale2, portraitScale3, portraitScale4, portraitScale5];
 
@@ -106,11 +106,11 @@ export default function PortraitScroll() {
 
   // Calculate portrait zoom scale for intimacy - individual hooks
   const portraitZoomScale0 = useTransform(smoothedProgress, [0 - 0.05, 0, 0 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
-  const portraitZoomScale1 = useTransform(smoothedProgress, [1 / 6 - 0.05, 1 / 6, 1 / 6 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
-  const portraitZoomScale2 = useTransform(smoothedProgress, [2 / 6 - 0.05, 2 / 6, 2 / 6 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
-  const portraitZoomScale3 = useTransform(smoothedProgress, [3 / 6 - 0.05, 3 / 6, 3 / 6 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
-  const portraitZoomScale4 = useTransform(smoothedProgress, [4 / 6 - 0.05, 4 / 6, 4 / 6 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
-  const portraitZoomScale5 = useTransform(smoothedProgress, [5 / 6 - 0.05, 5 / 6, 5 / 6 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
+  const portraitZoomScale1 = useTransform(smoothedProgress, [1 / 5 - 0.05, 1 / 5, 1 / 5 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
+  const portraitZoomScale2 = useTransform(smoothedProgress, [2 / 5 - 0.05, 2 / 5, 2 / 5 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
+  const portraitZoomScale3 = useTransform(smoothedProgress, [3 / 5 - 0.05, 3 / 5, 3 / 5 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
+  const portraitZoomScale4 = useTransform(smoothedProgress, [4 / 5 - 0.05, 4 / 5, 4 / 5 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
+  const portraitZoomScale5 = useTransform(smoothedProgress, [5 / 5 - 0.05, 5 / 5, 5 / 5 + 0.05], [PORTRAIT_SCALE_RANGE[0], PORTRAIT_SCALE_RANGE[1], PORTRAIT_SCALE_RANGE[0]]);
 
   const portraitZoomScales = [portraitZoomScale0, portraitZoomScale1, portraitZoomScale2, portraitZoomScale3, portraitZoomScale4, portraitZoomScale5];
 
@@ -120,11 +120,11 @@ export default function PortraitScroll() {
 
   // Calculate parallax drift for each portrait - individual hooks
   const parallaxX0 = useTransform(smoothedProgress, [0 - 0.1, 0, 0 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
-  const parallaxX1 = useTransform(smoothedProgress, [1 / 6 - 0.1, 1 / 6, 1 / 6 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
-  const parallaxX2 = useTransform(smoothedProgress, [2 / 6 - 0.1, 2 / 6, 2 / 6 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
-  const parallaxX3 = useTransform(smoothedProgress, [3 / 6 - 0.1, 3 / 6, 3 / 6 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
-  const parallaxX4 = useTransform(smoothedProgress, [4 / 6 - 0.1, 4 / 6, 4 / 6 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
-  const parallaxX5 = useTransform(smoothedProgress, [5 / 6 - 0.1, 5 / 6, 5 / 6 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
+  const parallaxX1 = useTransform(smoothedProgress, [1 / 5 - 0.1, 1 / 5, 1 / 5 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
+  const parallaxX2 = useTransform(smoothedProgress, [2 / 5 - 0.1, 2 / 5, 2 / 5 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
+  const parallaxX3 = useTransform(smoothedProgress, [3 / 5 - 0.1, 3 / 5, 3 / 5 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
+  const parallaxX4 = useTransform(smoothedProgress, [4 / 5 - 0.1, 4 / 5, 4 / 5 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
+  const parallaxX5 = useTransform(smoothedProgress, [5 / 5 - 0.1, 5 / 5, 5 / 5 + 0.1], [PARALLAX_RANGE[0], 0, PARALLAX_RANGE[1]]);
 
   const parallaxXs = [parallaxX0, parallaxX1, parallaxX2, parallaxX3, parallaxX4, parallaxX5];
 
@@ -166,7 +166,6 @@ export default function PortraitScroll() {
     const loadImages = async () => {
       for (let i = 0; i < PORTRAIT_COUNT; i++) {
         const img = document.createElement('img');
-        img.src = PORTRAITS_DIR + PORTRAIT_IMAGES[i];
         img.onload = () => {
           loadedCount++;
           setLoadingProgress(Math.round((loadedCount / PORTRAIT_COUNT) * 100));
@@ -179,6 +178,7 @@ export default function PortraitScroll() {
           setLoadingProgress(Math.round((loadedCount / PORTRAIT_COUNT) * 100));
           if (loadedCount === PORTRAIT_COUNT) setImagesLoaded(true);
         };
+        img.src = PORTRAITS_DIR + PORTRAIT_IMAGES[i];
       }
     };
 
@@ -213,7 +213,7 @@ export default function PortraitScroll() {
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 z-50 flex items-center justify-center bg-[#050505] text-white/50 font-mono text-xs sm:text-sm"
+            className="absolute bottom-5 left-5 z-50 rounded-full border border-white/10 bg-black/50 px-3 py-2 text-white/50 font-mono text-[10px]"
           >
             <div className="text-center">
               <div className="mb-2">LOADING PRESENCE...</div>

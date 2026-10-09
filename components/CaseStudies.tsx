@@ -6,12 +6,12 @@ import { useRouter } from "next/navigation";
 import RevealHeading from "@/components/ui/RevealHeading";
 import Image, { StaticImageData } from "next/image";
 
-import ForgebotThumbnail from "@/public/thumbnail/Gemini_Generated_Image_x3yb9x3yb9x3yb9x.png";
+import ForgebotThumbnail from "@/public/thumbnail/generated/llm-forgebot-cover-2026-10.webp";
 import StudyHubThumbnail from "@/public/thumbnail/AI-study-hub.png";
 import PodjamThumbnail from "@/public/thumbnail/podjam.png";
 import FamilyChatbotThumbnail from "@/public/thumbnail/family-chatbot.png";
 import EsportsThumbnail from "@/public/thumbnail/esports.png"; 
-import TimetableThumbnail from "@/public/thumbnail/timetable.png";
+import TimetableThumbnail from "@/public/thumbnail/generated/skct-timetable-cover-2026-10.webp";
 import TripBharatThumbnail from "@/public/thumbnail/trip-bharat.png";
 
 
@@ -103,7 +103,7 @@ const PROJECTS: Project[] = [
     id: "hackaura",
     name: "HackAura",
     summary:
-      "Hackathon project — built end-to-end under time pressure. Python core, focused scope, shipped.",
+      "Hackathon project - built end-to-end under time pressure. Python core, focused scope, shipped.",
     color: "#EAB308",
     externalUrl: "https://github.com/haresh-sai06/HackAura",
     tags: ["Python", "Hackathon"],
@@ -112,7 +112,7 @@ const PROJECTS: Project[] = [
     id: "voice-agents",
     name: "Voice Agents",
     summary:
-      "A line of conversational voice agents — including a dental clinic agent and a reusable setup pipeline. LLM + speech, deployed end-to-end.",
+      "A line of conversational voice agents - including a dental clinic agent and a reusable setup pipeline. LLM + speech, deployed end-to-end.",
     color: "#06B6D4",
     isPrivate: true,
     tags: ["Voice AI", "LLM", "Python"],
@@ -121,7 +121,7 @@ const PROJECTS: Project[] = [
     id: "stock-guardian",
     name: "Stock Guardian",
     summary:
-      "Personal-finance / portfolio guardrail tool. Watchlists, alerts, and a clean reporting surface — built to learn the finance domain.",
+      "Personal-finance / portfolio guardrail tool. Watchlists, alerts, and a clean reporting surface - built to learn the finance domain.",
     color: "#22C55E",
     isPrivate: true,
     tags: ["Finance", "TypeScript"],
