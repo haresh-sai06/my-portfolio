@@ -11,6 +11,7 @@ export interface Project {
   href: string;
   thumbnail?: string;
   repository?: string;
+  demoUrl?: string;
   updatedAt?: string;
   overview?: string;
   highlights?: string[];

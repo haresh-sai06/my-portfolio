@@ -1,6 +1,32 @@
 {
   "repositories": [
     {
+      "name": "manastej-redesign",
+      "url": "https://github.com/haresh-sai06/manastej-redesign",
+      "updatedAt": "2026-10-15T19:04:24Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "clearstudy",
+      "url": "https://github.com/haresh-sai06/clearstudy",
+      "updatedAt": "2026-10-13T04:39:46Z",
+      "description": "Browser-local study planner with editable priorities, recall notes and validated backups",
+      "language": "JavaScript"
+    },
+    {
+      "name": "homerelay",
+      "url": "https://github.com/haresh-sai06/homerelay",
+      "updatedAt": "2026-10-10T04:27:26Z",
+      "description": "Household task ownership, accepted handoffs and real Streamable HTTP MCP tools",
+      "language": "Python"
+    },
+    {
+      "name": "my-portfolio",
+      "url": "https://github.com/haresh-sai06/my-portfolio",
+      "updatedAt": "2026-10-09T08:05:46Z",
+      "language": "TypeScript"
+    },
+    {
       "name": "IQOO-Hackathon-LiveVolume",
       "url": "https://github.com/haresh-sai06/IQOO-Hackathon-LiveVolume",
       "updatedAt": "2026-10-05T15:09:54Z",
@@ -110,12 +136,6 @@
       "url": "https://github.com/haresh-sai06/HF_APP_Frontend",
       "updatedAt": "2026-07-03T16:52:09Z",
       "language": "HTML"
-    },
-    {
-      "name": "my-portfolio",
-      "url": "https://github.com/haresh-sai06/my-portfolio",
-      "updatedAt": "2026-06-25T05:27:47Z",
-      "language": "TypeScript"
     },
     {
       "name": "X-AI",

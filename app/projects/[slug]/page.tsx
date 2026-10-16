@@ -51,7 +51,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     <main className="mx-auto min-h-screen max-w-6xl px-5 pb-24 pt-8 sm:px-8">
       <nav className="mb-20 flex items-center justify-between border-b border-white/10 pb-6 text-xs text-white/65">
         <Link href="/" className="font-mono uppercase tracking-wider">
-          Haresh Sainaath
+          Haresh Sainaath S
         </Link>
         <Link href="/#projects" className="hover:text-white">
           ← All projects
@@ -86,6 +86,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               className="mt-8 inline-flex items-center gap-5 rounded-full bg-[rgb(168,255,96)] px-6 py-3 text-sm font-medium text-black"
             >
               Explore repository <span aria-hidden>↗</span>
+            </a>
+          )}
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 mt-4 inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-sm text-white/80 hover:bg-white/5"
+            >
+              Try live demo <span aria-hidden>↗</span>
             </a>
           )}
         </div>

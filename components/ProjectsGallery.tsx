@@ -135,8 +135,8 @@ export default function ProjectsGallery() {
           </div>
           <div className="max-w-sm">
             <p className="text-sm leading-relaxed text-white/60">
-              From spatial calling and applied ML to the everyday tools people
-              use. Recent work first, with the context and source behind it.
+              From study tools and household workflows to spatial calling and
+              applied ML. Recent work first, with the context and source behind it.
             </p>
             <a
               href="https://github.com/haresh-sai06?tab=repositories"

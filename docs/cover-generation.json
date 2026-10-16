@@ -127,6 +127,30 @@
       "width": 1586,
       "height": 992,
       "prompt": "Use case: stylized-concept. Asset type: a premium portfolio project cover, a single landscape raster artwork, 16:10 aspect ratio. Create a richly detailed editorial 3D illustration with believable tactile materials and restrained cinematic lighting, a near-black graphite environment, selective luminous accents. It must communicate the specific project at thumbnail size, with one strong focal subject and a clean silhouette. Keep the important subject within the central 70% so it crops cleanly. Leave both top corners quietly dark for website status badges. No text, no lettering, no numbers, no logos, no watermarks, no fake UI screenshot, no stock cyberpunk wallpaper. This is conceptual cover artwork, not proof of a deployed product. Subject: Personal finance watchlists and alerts: a solid translucent emerald shield standing in front of a restrained glass financial trend line and organized watchlist-like geometric cards, a small softly glowing notification beacon. Carefully balanced graph includes rises and dips, no exaggerated guaranteed profit symbolism, no currency logos, dark emerald and brushed silver."
+    },
+    {
+      "project": "manastej-redesign",
+      "cover": "/thumbnail/generated/manastej-redesign-cover-2026-10.webp",
+      "original": "exec-833db13d-a1b4-483e-9044-fe86cc5ba808.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Editorial 3D illustration with tactile materials, restrained cinematic lighting, a near-black graphite environment and selective luminous accents. One recognizable focal subject, clean silhouette at thumbnail size. Keep key subject in central 70%, both top corners dark for status badges. No text, letters, numbers, logos, watermark or fake UI screenshots. Conceptual project illustration, no claims of a deployed product. Subject: an unofficial mental wellness website redesign concept represented by a sculptural translucent glass head silhouette enclosing softly illuminated botanical leaves, surrounded by a few flowing paper ribbons and interface-like translucent planes with no text. Calm teal and pale mint highlights on graphite, thoughtful spacious composition. Do not reproduce any brand logo or recognizable person."
+    },
+    {
+      "project": "clearstudy",
+      "cover": "/thumbnail/generated/clearstudy-cover-2026-10.webp",
+      "original": "exec-574b313b-9ac2-4273-91ef-a5b3f46ea49a.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Editorial 3D illustration with tactile materials, restrained cinematic lighting, a near-black graphite environment and selective luminous accents. One recognizable focal subject, clean silhouette at thumbnail size. Keep key subject in central 70%, both top corners dark for status badges. No text, letters, numbers, logos, watermark or fake UI screenshots. Conceptual project illustration, no claims of a deployed product. Subject: a local revision and recall workspace represented by a neat arrangement of study question cards, a glass hourglass and an open notebook, with luminous warm amber paths connecting cards into an ordered review queue. Small embossed check marks only, absolutely no writing. Deep graphite desk, warm ivory paper, amber light, focused organized mood."
+    },
+    {
+      "project": "homerelay",
+      "cover": "/thumbnail/generated/homerelay-cover-2026-10.webp",
+      "original": "exec-37a5f50d-6bd0-4530-a6d6-58dc24ec783f.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Editorial 3D illustration with tactile materials, restrained cinematic lighting, a near-black graphite environment and selective luminous accents. One recognizable focal subject, clean silhouette at thumbnail size. Keep key subject in central 70%, both top corners dark for status badges. No text, letters, numbers, logos, watermark or fake UI screenshots. Conceptual project illustration, no claims of a deployed product. Subject: household task ownership and accepted handoffs represented by a small architectural cutaway house, three distinct illuminated task tokens on a central board and an elegant linked pair of translucent rings carrying one token between stations. Mint and electric blue accents, warm home windows, graphite base. Communicate coordinated domestic tasks, no people, no writing or logos."
     }
   ]
 }

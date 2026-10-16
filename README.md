@@ -6,7 +6,7 @@ A Next.js portfolio with a searchable project gallery, project detail pages, and
 
 `data/projects.json` is the single source for the gallery, project count, and new project detail pages. Every entry needs a name, meaningful summary, category, honest status, technologies, color, and working destination. New `/projects/<id>` pages also need an overview, build highlights, and a public repository link. Existing case studies retain their routes.
 
-Every project has a cover image. The 15 new conceptual covers use built-in ImageGen; final WebP assets are in `public/thumbnail/generated/`, and the exact prompts are in `docs/cover-generation.json`. Preserve the user-approved eSports Tournament, Trip Bharat, Family Chatbot, PodJam, and AI Study Hub covers unless the user explicitly requests changes.
+Every project has a cover image. The 18 conceptual covers use built-in ImageGen; final WebP assets are in `public/thumbnail/generated/`, and the exact prompts are in `docs/cover-generation.json`. Preserve the user-approved eSports Tournament, Trip Bharat, Family Chatbot, PodJam, and AI Study Hub covers unless the user explicitly requests changes.
 
 `lib/profile.ts` declares the active résumé URL and download filename. The October 2026 update uses the user-provided PDF from `Documents/Resume/Applications/resume.pdf`, copied byte-for-byte. Both the main navigation and contact component use this shared configuration. Résumé responses use attachment headers and must revalidate to prevent stale downloads. The prior canonical résumé URL also serves the updated file for compatibility.
 

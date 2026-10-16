@@ -53,6 +53,8 @@ for (const project of projects) {
     issues.push(`${project.id}: missing image`);
   if (project.updatedAt && Number.isNaN(Date.parse(project.updatedAt)))
     issues.push(`${project.id}: invalid activity date`);
+  if (project.demoUrl && !/^https:\/\/[^\s]+$/.test(project.demoUrl))
+    issues.push(`${project.id}: invalid demo URL`);
   if (project.href?.startsWith("/projects/")) {
     if (project.href !== `/projects/${project.id}`)
       issues.push(`${project.id}: detail route does not match id`);

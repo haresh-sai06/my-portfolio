@@ -1,5 +1,81 @@
 [
   {
+    "id": "manastej-redesign",
+    "name": "Manastej Redesign",
+    "category": "Full-stack",
+    "status": "Unofficial concept",
+    "summary": "A motion-rich website redesign concept for Manastej, with responsive layouts and scroll-driven storytelling.",
+    "overview": "An unofficial redesign concept built with Next.js 15, Tailwind CSS v4, GSAP ScrollTrigger, and Lenis. It explores a mental wellness platform's visual presentation through horizontal feature panels, botanical artwork, and layered typography. The Manastej name, logo, and original copy belong to Manastej; this is a design concept, not a commissioned product or a working care service.",
+    "highlights": [
+      "Scroll-driven horizontal feature panels and depth parallax",
+      "Responsive sections with reduced-motion alternatives",
+      "Reusable motion helpers scoped to each section",
+      "Desktop, mobile, and reduced-motion screenshots in the repository"
+    ],
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "GSAP"
+    ],
+    "color": "#8FD9C3",
+    "href": "/projects/manastej-redesign",
+    "repository": "https://github.com/haresh-sai06/manastej-redesign",
+    "updatedAt": "2026-10-15T19:04:24Z",
+    "thumbnail": "/thumbnail/generated/manastej-redesign-cover-2026-10.webp"
+  },
+  {
+    "id": "clearstudy",
+    "name": "ClearStudy",
+    "category": "Tools & Research",
+    "status": "Working prototype",
+    "summary": "A browser-local revision workspace with priority-based study plans, recall practice, a focus timer, and validated backups.",
+    "overview": "A dependency-free HTML, CSS, and JavaScript study workspace that stores plans, notes, and recall history locally in the browser. Study time is allocated using explicit importance and confidence scores, and review intervals follow deterministic rules. It supports editable question banks, CSV import, offline caching, and JSON backup restoration. A hosted demo is available; real-user evaluation is still pending, and no educational outcome claims are made.",
+    "highlights": [
+      "Study plans that allocate the exact requested whole-minute budget",
+      "Editable question bank with CSV import and duplicate detection",
+      "Self-rated recall, due-review queues, and a persistent focus timer",
+      "Validated JSON backups and stale-tab save conflict detection"
+    ],
+    "tags": [
+      "JavaScript",
+      "HTML/CSS",
+      "localStorage",
+      "Service Worker"
+    ],
+    "color": "#E9C580",
+    "href": "/projects/clearstudy",
+    "repository": "https://github.com/haresh-sai06/clearstudy",
+    "demoUrl": "https://haresh-sai06.github.io/clearstudy/",
+    "updatedAt": "2026-10-13T04:39:46Z",
+    "thumbnail": "/thumbnail/generated/clearstudy-cover-2026-10.webp"
+  },
+  {
+    "id": "homerelay",
+    "name": "HomeRelay",
+    "category": "Full-stack",
+    "status": "Local prototype",
+    "summary": "A household task board where ownership changes only after an accepted handoff, with persistent history and six MCP tools.",
+    "overview": "A functioning trusted-household prototype built with FastAPI, SQLite, and a browser interface. Tasks retain their current owner while a handoff is pending, and only the selected recipient can accept or decline. REST and Streamable HTTP MCP expose the same stored workflow with version checks for stale changes. It has no individual account isolation or publicly hosted application, and is presented as a local prototype rather than a production household service.",
+    "highlights": [
+      "Explicit propose, accept, decline, and complete task transitions",
+      "SQLite persistence and ordered task history",
+      "Version checks and request IDs for stale updates and duplicate retries",
+      "Six Streamable HTTP MCP tools backed by stored task data"
+    ],
+    "tags": [
+      "Python",
+      "FastAPI",
+      "SQLite",
+      "MCP"
+    ],
+    "color": "#83CFE3",
+    "href": "/projects/homerelay",
+    "repository": "https://github.com/haresh-sai06/homerelay",
+    "updatedAt": "2026-10-10T04:27:26Z",
+    "thumbnail": "/thumbnail/generated/homerelay-cover-2026-10.webp"
+  },
+  {
     "id": "livevolume",
     "name": "LiveVolume",
     "category": "AI & ML",
