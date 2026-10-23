@@ -1,9 +1,69 @@
 {
   "repositories": [
     {
+      "name": "reliefstream",
+      "url": "https://github.com/haresh-sai06/reliefstream",
+      "updatedAt": "2026-10-23T03:50:49Z",
+      "description": "Real-time flood-rescue request centralization dashboard · LLM extraction + dedup + map · Code for Communities 2026",
+      "language": "Python"
+    },
+    {
+      "name": "aeroops-java",
+      "url": "https://github.com/haresh-sai06/aeroops-java",
+      "updatedAt": "2026-10-23T02:26:20Z",
+      "description": "Spring Boot 3 microservice serving the AeroOps XGBoost flight-delay model in pure Java: Redis cache, Postgres audit log, OpenTelemetry, load-tested",
+      "language": "Java"
+    },
+    {
+      "name": "docpilot-rag",
+      "url": "https://github.com/haresh-sai06/docpilot-rag",
+      "updatedAt": "2026-10-19T13:25:08Z",
+      "description": "RAG/agent system over the FastAPI docs: BM25 + dense (Qdrant) hybrid retrieval, cross-encoder reranking, LangGraph routing, embedding/response caching, retrieval & generation evals, latency/cost benchmarks",
+      "language": "Python"
+    },
+    {
+      "name": "phalanx",
+      "url": "https://github.com/haresh-sai06/phalanx",
+      "updatedAt": "2026-10-19T13:23:02Z",
+      "description": "Autonomous multi-persona QA & security testing swarm - HackFusion 2026",
+      "language": "HTML"
+    },
+    {
+      "name": "aeroops-ml",
+      "url": "https://github.com/haresh-sai06/aeroops-ml",
+      "updatedAt": "2026-10-19T12:48:10Z",
+      "description": "End-to-end aviation ML system: PySpark medallion + feature pipeline on 1.66M BTS flights, flight-delay & turbofan RUL models (XGBoost/LSTM, MLflow, SHAP), FastAPI serving, Streamlit dashboard, Docker + Cloud Run/App Runner",
+      "language": "Python"
+    },
+    {
+      "name": "Win-Clicky",
+      "url": "https://github.com/haresh-sai06/Win-Clicky",
+      "updatedAt": "2026-10-19T12:29:08Z",
+      "language": "Rust"
+    },
+    {
+      "name": "DL-Project-SynapseERP-",
+      "url": "https://github.com/haresh-sai06/DL-Project-SynapseERP-",
+      "updatedAt": "2026-10-19T11:48:11Z",
+      "language": "Python"
+    },
+    {
+      "name": "crop-disease-concept-net",
+      "url": "https://github.com/haresh-sai06/crop-disease-concept-net",
+      "updatedAt": "2026-10-19T11:19:25Z",
+      "description": "Concept Bottleneck Transfer Learning for Crop Disease Detection (Kaggle dataset)",
+      "language": "Python"
+    },
+    {
       "name": "manastej-redesign",
       "url": "https://github.com/haresh-sai06/manastej-redesign",
-      "updatedAt": "2026-10-15T19:04:24Z",
+      "updatedAt": "2026-10-16T15:01:01Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "my-portfolio",
+      "url": "https://github.com/haresh-sai06/my-portfolio",
+      "updatedAt": "2026-10-16T05:01:00Z",
       "language": "TypeScript"
     },
     {
@@ -21,23 +81,11 @@
       "language": "Python"
     },
     {
-      "name": "my-portfolio",
-      "url": "https://github.com/haresh-sai06/my-portfolio",
-      "updatedAt": "2026-10-09T08:05:46Z",
-      "language": "TypeScript"
-    },
-    {
       "name": "IQOO-Hackathon-LiveVolume",
       "url": "https://github.com/haresh-sai06/IQOO-Hackathon-LiveVolume",
       "updatedAt": "2026-10-05T15:09:54Z",
       "description": "IQOO Hackathon Project",
       "language": "Kotlin"
-    },
-    {
-      "name": "DL-Project-SynapseERP-",
-      "url": "https://github.com/haresh-sai06/DL-Project-SynapseERP-",
-      "updatedAt": "2026-09-10T18:18:20Z",
-      "language": "Python"
     },
     {
       "name": "quantum-dj-phase-oracle",
@@ -51,13 +99,6 @@
       "updatedAt": "2026-09-08T05:17:09Z",
       "description": "IQOO Hackathon Github Repository",
       "language": "TypeScript"
-    },
-    {
-      "name": "crop-disease-concept-net",
-      "url": "https://github.com/haresh-sai06/crop-disease-concept-net",
-      "updatedAt": "2026-08-29T04:44:20Z",
-      "description": "Concept Bottleneck Transfer Learning for Crop Disease Detection (Kaggle dataset)",
-      "language": "Python"
     },
     {
       "name": "singlepass-studio",
@@ -79,20 +120,6 @@
       "updatedAt": "2026-08-20T04:43:14Z",
       "description": "Full-stack RedBus-inspired bus booking platform · Next.js 15 + Supabase + Tailwind · Internshala capstone",
       "language": "TypeScript"
-    },
-    {
-      "name": "reliefstream",
-      "url": "https://github.com/haresh-sai06/reliefstream",
-      "updatedAt": "2026-08-18T10:47:17Z",
-      "description": "Real-time flood-rescue request centralization dashboard · LLM extraction + dedup + map · Code for Communities 2026",
-      "language": "Python"
-    },
-    {
-      "name": "phalanx",
-      "url": "https://github.com/haresh-sai06/phalanx",
-      "updatedAt": "2026-08-16T17:07:09Z",
-      "description": "Autonomous multi-persona QA & security testing swarm - HackFusion 2026",
-      "language": "HTML"
     },
     {
       "name": "aura-lenscraft",
@@ -148,12 +175,6 @@
       "url": "https://github.com/haresh-sai06/DSA-Java",
       "updatedAt": "2026-06-20T17:03:28Z",
       "language": "Java"
-    },
-    {
-      "name": "Win-Clicky",
-      "url": "https://github.com/haresh-sai06/Win-Clicky",
-      "updatedAt": "2026-06-18T05:49:40Z",
-      "language": "Rust"
     },
     {
       "name": "tracker-app",

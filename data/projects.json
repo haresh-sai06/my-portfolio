@@ -1,5 +1,203 @@
 [
   {
+    "id": "reliefstream",
+    "name": "ReliefStream",
+    "category": "AI & ML",
+    "status": "MVP",
+    "summary": "Centralizes flood rescue requests with AI extraction, deduplication, a map, and volunteer coordination.",
+    "overview": "A flood rescue coordination MVP for Code for Communities 2026. It turns scattered social-media text into prioritized requests and keeps ambiguous model output visible for a human operator to review.",
+    "highlights": [
+      "Structured location, urgency, and request-type extraction",
+      "Duplicate request grouping and severity-coded map pins",
+      "Volunteer assignment, resolution, and outcome logs",
+      "A human-review queue for ambiguous requests"
+    ],
+    "tags": [
+      "Python",
+      "FastAPI",
+      "Ollama",
+      "Leaflet"
+    ],
+    "color": "#7DCFFF",
+    "href": "/projects/reliefstream",
+    "repository": "https://github.com/haresh-sai06/reliefstream",
+    "updatedAt": "2026-10-23T03:50:49Z",
+    "thumbnail": "/thumbnail/generated/reliefstream-cover-2026-10.webp"
+  },
+  {
+    "id": "aeroops-java",
+    "name": "AeroOps Java",
+    "category": "Full-stack",
+    "status": "Service prototype",
+    "summary": "A Spring Boot flight-delay prediction service with Java XGBoost inference, Redis caching, and PostgreSQL audit logs.",
+    "overview": "A Java serving companion to AeroOps ML. A native tree evaluator reads the XGBoost JSON model, including categorical splits and missing-value branches, without a Python sidecar. The service adds request validation, Redis cache-aside, asynchronous PostgreSQL audit writes, and OpenTelemetry instrumentation. Repository tests compare predictions with Python-generated fixtures. It is a local service prototype with no verified cloud deployment, authentication, or rate limiting.",
+    "highlights": [
+      "Pure Java XGBoost tree evaluation with numerical and categorical splits",
+      "Redis caching with an inference fallback when the cache is unavailable",
+      "Asynchronous PostgreSQL audit writes and Flyway migrations",
+      "OpenTelemetry instrumentation and Python-to-Java prediction parity tests"
+    ],
+    "tags": [
+      "Java",
+      "Spring Boot",
+      "Redis",
+      "PostgreSQL"
+    ],
+    "color": "#E8AA74",
+    "href": "/projects/aeroops-java",
+    "repository": "https://github.com/haresh-sai06/aeroops-java",
+    "updatedAt": "2026-10-23T02:26:20Z",
+    "thumbnail": "/thumbnail/generated/aeroops-java-cover-2026-10.webp"
+  },
+  {
+    "id": "docpilot-rag",
+    "name": "DocPilot RAG",
+    "category": "AI & ML",
+    "status": "Research prototype",
+    "summary": "Documentation Q&A combining keyword and dense retrieval, cross-encoder reranking, and source citations.",
+    "overview": "A FastAPI documentation assistant with a React interface. It combines BM25 and Qdrant dense retrieval through reciprocal rank fusion, with optional cross-encoder reranking. LangGraph routes questions through retrieval, a bounded query rewrite, and generation; SQLite caches embeddings and complete responses. The repository includes retrieval and generation ablations, but its evaluation questions are synthetic and not manually reviewed. Cloud deployment files are provided as configuration, without a verified hosted application.",
+    "highlights": [
+      "BM25 and Qdrant hybrid retrieval with reciprocal rank fusion",
+      "Optional cross-encoder reranking before selecting source passages",
+      "LangGraph routing, one query-rewrite retry, and numbered source citations",
+      "Persistent embedding and response caches plus evaluation scripts"
+    ],
+    "tags": [
+      "Python",
+      "LangGraph",
+      "Qdrant",
+      "FastAPI"
+    ],
+    "color": "#B8A0ED",
+    "href": "/projects/docpilot-rag",
+    "repository": "https://github.com/haresh-sai06/docpilot-rag",
+    "updatedAt": "2026-10-19T13:25:08Z",
+    "thumbnail": "/thumbnail/generated/docpilot-rag-cover-2026-10.webp"
+  },
+  {
+    "id": "phalanx",
+    "name": "Phalanx",
+    "category": "Tools & Research",
+    "status": "Concept",
+    "summary": "A HackFusion concept for multi-persona agents that audit application flows, security, and usability.",
+    "overview": "A HackFusion 2026 Round 1 concept for autonomous QA. The proposed architecture combines simultaneous synthetic users, code-aware persona generation, and reproducible Playwright findings. Presented as a concept rather than a production service.",
+    "highlights": [
+      "Proposed multi-persona browser sessions",
+      "Cross-user permission and concurrency scenarios",
+      "Code-aware persona generation",
+      "Reproducible findings with Playwright scripts"
+    ],
+    "tags": [
+      "LangGraph",
+      "Playwright",
+      "MCP"
+    ],
+    "color": "#C8AEFF",
+    "href": "/projects/phalanx",
+    "repository": "https://github.com/haresh-sai06/phalanx",
+    "updatedAt": "2026-10-19T13:23:02Z",
+    "thumbnail": "/thumbnail/generated/phalanx-cover-2026-10.webp"
+  },
+  {
+    "id": "aeroops-ml",
+    "name": "AeroOps ML",
+    "category": "AI & ML",
+    "status": "Research prototype",
+    "summary": "An aviation ML pipeline for flight-delay prediction and engine remaining useful life, with data-quality checks and model serving.",
+    "overview": "A PySpark bronze, silver, and gold pipeline over public flight data, paired with turbofan remaining-life experiments. Feature-group ablations and MLflow tracking support time-based flight validation and engine-group validation. FastAPI exposes XGBoost delay and remaining-life predictions, while a Streamlit dashboard presents KPIs and model results. An LSTM is included in the research comparison rather than the serving path. Cloud Run and App Runner files are deployment configurations, not evidence of a hosted service.",
+    "highlights": [
+      "PySpark data-quality gates, partitioned Parquet, and a DuckDB KPI layer",
+      "Time-based flight-delay validation and engine-group RUL evaluation",
+      "MLflow experiment tracking, feature ablations, and SHAP explanations",
+      "FastAPI prediction endpoints and a Streamlit results dashboard"
+    ],
+    "tags": [
+      "Python",
+      "PySpark",
+      "XGBoost",
+      "MLflow"
+    ],
+    "color": "#82CFE5",
+    "href": "/projects/aeroops-ml",
+    "repository": "https://github.com/haresh-sai06/aeroops-ml",
+    "updatedAt": "2026-10-19T12:48:10Z",
+    "thumbnail": "/thumbnail/generated/aeroops-ml-cover-2026-10.webp"
+  },
+  {
+    "id": "win-clicky",
+    "name": "Win-Clicky",
+    "summary": "A Tauri desktop assistant scaffold for screen questions, spoken responses, and guided cursor-based demos on Windows.",
+    "overview": "A Rust and Tauri 2 Windows assistant scaffold with a floating panel and a transparent pointing overlay. The source integrates screenshot capture, configurable LLM providers, Windows speech synthesis, and scripted or model-assisted demo walkthroughs. Vision-based features require a suitable model, and speech recognition depends on browser support. It is presented as an MVP scaffold rather than a verified packaged release.",
+    "highlights": [
+      "Floating assistant panel and transparent cursor-pointing overlay",
+      "Screenshot capture with configurable LLM providers",
+      "Windows speech synthesis and browser-dependent voice input",
+      "JSON demo scripts with explicit coordinates or model-assisted pointing"
+    ],
+    "category": "Tools & Research",
+    "status": "MVP scaffold",
+    "color": "#F97316",
+    "tags": [
+      "Rust",
+      "Tauri",
+      "Windows"
+    ],
+    "href": "/projects/win-clicky",
+    "repository": "https://github.com/haresh-sai06/Win-Clicky",
+    "updatedAt": "2026-10-19T12:29:08Z",
+    "thumbnail": "/thumbnail/generated/win-clicky-cover-2026-10.webp"
+  },
+  {
+    "id": "synapse-erp",
+    "name": "Synapse ERP",
+    "category": "AI & ML",
+    "status": "In development",
+    "featured": true,
+    "summary": "Converts handwritten ledgers, product photos, and informal orders into structured business records.",
+    "overview": "A multimodal OCR and deep-learning project for Indian MSMEs. A Next.js conversion desk and FastAPI backend turn existing offline records into inventory, customer records, invoices, and analytics. Completed conversions include an editable workspace with conversion-scoped bearer access, alongside offline HTML and CSV exports. The repository distinguishes implemented software workflows from OCR, product-recognition, and order-extraction model scaffolds and planned training.",
+    "highlights": [
+      "Handwritten ledger OCR architecture and training scaffold",
+      "Product recognition and code-mixed order extraction scaffolds",
+      "Conversion-scoped access to inventory, customer, and invoice CRUD",
+      "Background conversion jobs, offline exports, and forecasting training scripts"
+    ],
+    "tags": [
+      "Python",
+      "OCR",
+      "Next.js",
+      "FastAPI"
+    ],
+    "color": "#B8A0FF",
+    "href": "/projects/synapse-erp",
+    "repository": "https://github.com/haresh-sai06/DL-Project-SynapseERP-",
+    "updatedAt": "2026-10-19T11:48:11Z",
+    "thumbnail": "/thumbnail/generated/synapse-erp-cover-2026-10.webp"
+  },
+  {
+    "id": "crop-disease",
+    "name": "Crop Disease Concept Net",
+    "category": "AI & ML",
+    "status": "Research experiment",
+    "summary": "An interpretable crop disease model that connects leaf images to six visible symptom concepts.",
+    "overview": "Transfer learning with a Concept Bottleneck Network: a pretrained ResNet18 feeds a six-symptom concept layer and a 14-class disease head. Training and prediction scripts support the crop disease dataset and synthetic demo data.",
+    "highlights": [
+      "ResNet18 → symptom concepts → disease classification",
+      "Six concepts including rust patches, yellowing, and healthy tissue",
+      "Dataset split variants and a two-class comparison",
+      "Training, prediction, and synthetic demo-data scripts"
+    ],
+    "tags": [
+      "Python",
+      "ResNet18",
+      "Transfer learning"
+    ],
+    "color": "#82D8A0",
+    "href": "/projects/crop-disease",
+    "repository": "https://github.com/haresh-sai06/crop-disease-concept-net",
+    "updatedAt": "2026-10-19T11:19:25Z",
+    "thumbnail": "/thumbnail/generated/crop-disease-cover-2026-10.webp"
+  },
+  {
     "id": "manastej-redesign",
     "name": "Manastej Redesign",
     "category": "Full-stack",
@@ -21,7 +219,7 @@
     "color": "#8FD9C3",
     "href": "/projects/manastej-redesign",
     "repository": "https://github.com/haresh-sai06/manastej-redesign",
-    "updatedAt": "2026-10-15T19:04:24Z",
+    "updatedAt": "2026-10-16T15:01:01Z",
     "thumbnail": "/thumbnail/generated/manastej-redesign-cover-2026-10.webp"
   },
   {
@@ -102,32 +300,6 @@
     "thumbnail": "/thumbnail/generated/livevolume-cover-2026-10.webp"
   },
   {
-    "id": "synapse-erp",
-    "name": "Synapse ERP",
-    "category": "AI & ML",
-    "status": "In development",
-    "featured": true,
-    "summary": "Converts handwritten ledgers, product photos, and informal orders into structured business records.",
-    "overview": "A multimodal OCR and deep-learning project for Indian MSMEs. A Next.js conversion desk and FastAPI backend turn existing offline records into inventory, customer records, invoices, and analytics. The repository distinguishes implemented workflows from model scaffolds and planned training.",
-    "highlights": [
-      "Handwritten ledger OCR architecture and training scaffold",
-      "Product recognition and code-mixed order extraction scaffolds",
-      "Structured inventory, CRM, invoice, and analytics output",
-      "Demand forecasting training script and background conversion jobs"
-    ],
-    "tags": [
-      "Python",
-      "OCR",
-      "Next.js",
-      "FastAPI"
-    ],
-    "color": "#B8A0FF",
-    "href": "/projects/synapse-erp",
-    "repository": "https://github.com/haresh-sai06/DL-Project-SynapseERP-",
-    "updatedAt": "2026-09-10T18:18:20Z",
-    "thumbnail": "/thumbnail/generated/synapse-erp-cover-2026-10.webp"
-  },
-  {
     "id": "quantum-phase-oracle",
     "name": "Quantum Phase Oracle",
     "category": "Tools & Research",
@@ -149,30 +321,6 @@
     "repository": "https://github.com/haresh-sai06/quantum-dj-phase-oracle",
     "updatedAt": "2026-09-08T06:34:24Z",
     "thumbnail": "/thumbnail/generated/quantum-phase-oracle-cover-2026-10.webp"
-  },
-  {
-    "id": "crop-disease",
-    "name": "Crop Disease Concept Net",
-    "category": "AI & ML",
-    "status": "Research experiment",
-    "summary": "An interpretable crop disease model that connects leaf images to six visible symptom concepts.",
-    "overview": "Transfer learning with a Concept Bottleneck Network: a pretrained ResNet18 feeds a six-symptom concept layer and a 14-class disease head. Training and prediction scripts support the crop disease dataset and synthetic demo data.",
-    "highlights": [
-      "ResNet18 → symptom concepts → disease classification",
-      "Six concepts including rust patches, yellowing, and healthy tissue",
-      "Dataset split variants and a two-class comparison",
-      "Training, prediction, and synthetic demo-data scripts"
-    ],
-    "tags": [
-      "Python",
-      "ResNet18",
-      "Transfer learning"
-    ],
-    "color": "#82D8A0",
-    "href": "/projects/crop-disease",
-    "repository": "https://github.com/haresh-sai06/crop-disease-concept-net",
-    "updatedAt": "2026-08-29T04:44:20Z",
-    "thumbnail": "/thumbnail/generated/crop-disease-cover-2026-10.webp"
   },
   {
     "id": "singlepass-studio",
@@ -223,53 +371,19 @@
     "thumbnail": "/thumbnail/generated/swiftbus-cover-2026-10.webp"
   },
   {
-    "id": "reliefstream",
-    "name": "ReliefStream",
-    "category": "AI & ML",
-    "status": "MVP",
-    "summary": "Centralizes flood rescue requests with AI extraction, deduplication, a map, and volunteer coordination.",
-    "overview": "A flood rescue coordination MVP for Code for Communities 2026. It turns scattered social-media text into prioritized requests and keeps ambiguous model output visible for a human operator to review.",
-    "highlights": [
-      "Structured location, urgency, and request-type extraction",
-      "Duplicate request grouping and severity-coded map pins",
-      "Volunteer assignment, resolution, and outcome logs",
-      "A human-review queue for ambiguous requests"
-    ],
+    "id": "hackaura",
+    "name": "HackAura",
+    "summary": "A Python hackathon project with source code available for exploration.",
+    "category": "Tools & Research",
+    "status": "Public repository",
+    "color": "#EAB308",
     "tags": [
       "Python",
-      "FastAPI",
-      "Ollama",
-      "Leaflet"
+      "Hackathon"
     ],
-    "color": "#7DCFFF",
-    "href": "/projects/reliefstream",
-    "repository": "https://github.com/haresh-sai06/reliefstream",
-    "updatedAt": "2026-08-18T10:47:17Z",
-    "thumbnail": "/thumbnail/generated/reliefstream-cover-2026-10.webp"
-  },
-  {
-    "id": "phalanx",
-    "name": "Phalanx",
-    "category": "Tools & Research",
-    "status": "Concept",
-    "summary": "A HackFusion concept for multi-persona agents that audit application flows, security, and usability.",
-    "overview": "A HackFusion 2026 Round 1 concept for autonomous QA. The proposed architecture combines simultaneous synthetic users, code-aware persona generation, and reproducible Playwright findings. Presented as a concept rather than a production service.",
-    "highlights": [
-      "Proposed multi-persona browser sessions",
-      "Cross-user permission and concurrency scenarios",
-      "Code-aware persona generation",
-      "Reproducible findings with Playwright scripts"
-    ],
-    "tags": [
-      "LangGraph",
-      "Playwright",
-      "MCP"
-    ],
-    "color": "#C8AEFF",
-    "href": "/projects/phalanx",
-    "repository": "https://github.com/haresh-sai06/phalanx",
-    "updatedAt": "2026-08-16T17:07:09Z",
-    "thumbnail": "/thumbnail/generated/phalanx-cover-2026-10.webp"
+    "href": "https://github.com/haresh-sai06/HackAura",
+    "updatedAt": "2026-02-24T15:05:16Z",
+    "thumbnail": "/thumbnail/generated/hackaura-cover-2026-10.webp"
   },
   {
     "id": "llm-forgebot",
@@ -385,37 +499,6 @@
       "Travel"
     ],
     "href": "/trip-bharat"
-  },
-  {
-    "id": "win-clicky",
-    "name": "Win-Clicky",
-    "summary": "A lightweight Windows automation utility written in Rust.",
-    "category": "Tools & Research",
-    "status": "Public repository",
-    "color": "#F97316",
-    "tags": [
-      "Rust",
-      "Windows",
-      "Automation"
-    ],
-    "href": "https://github.com/haresh-sai06/Win-Clicky",
-    "updatedAt": "2026-06-18T05:49:40Z",
-    "thumbnail": "/thumbnail/generated/win-clicky-cover-2026-10.webp"
-  },
-  {
-    "id": "hackaura",
-    "name": "HackAura",
-    "summary": "A Python hackathon project with source code available for exploration.",
-    "category": "Tools & Research",
-    "status": "Public repository",
-    "color": "#EAB308",
-    "tags": [
-      "Python",
-      "Hackathon"
-    ],
-    "href": "https://github.com/haresh-sai06/HackAura",
-    "updatedAt": "2026-02-24T15:05:16Z",
-    "thumbnail": "/thumbnail/generated/hackaura-cover-2026-10.webp"
   },
   {
     "id": "voice-agents",

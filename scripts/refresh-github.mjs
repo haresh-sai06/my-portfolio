@@ -44,6 +44,10 @@ for (const project of projects) {
   );
   if (repository) project.updatedAt = repository.updatedAt;
 }
+// Keep dated work recent-first while retaining the relative order of undated case studies.
+projects.sort(
+  (a, b) => (Date.parse(b.updatedAt ?? "") || 0) - (Date.parse(a.updatedAt ?? "") || 0),
+);
 writeFileSync(
   resolve(root, "data/github.json"),
   `${JSON.stringify({ repositories: snapshot }, null, 2)}\n`,

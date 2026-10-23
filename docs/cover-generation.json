@@ -151,6 +151,30 @@
       "width": 1586,
       "height": 992,
       "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Editorial 3D illustration with tactile materials, restrained cinematic lighting, a near-black graphite environment and selective luminous accents. One recognizable focal subject, clean silhouette at thumbnail size. Keep key subject in central 70%, both top corners dark for status badges. No text, letters, numbers, logos, watermark or fake UI screenshots. Conceptual project illustration, no claims of a deployed product. Subject: household task ownership and accepted handoffs represented by a small architectural cutaway house, three distinct illuminated task tokens on a central board and an elegant linked pair of translucent rings carrying one token between stations. Mint and electric blue accents, warm home windows, graphite base. Communicate coordinated domestic tasks, no people, no writing or logos."
+    },
+    {
+      "project": "aeroops-java",
+      "cover": "/thumbnail/generated/aeroops-java-cover-2026-10.webp",
+      "original": "exec-aa9c2072-b514-4873-a111-303527d33eed.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Editorial 3D illustration with tactile materials, restrained cinematic lighting, near-black graphite setting and selective luminous accents. One recognizable focal subject, clean silhouette at thumbnail size, key subject in central 70%, both top corners quietly dark for website status badges. No text, lettering, numbers, logos, watermark or fake UI screenshots. Conceptual illustration, no suggestion of a publicly deployed product. Subject: an efficient flight-delay prediction service represented by a compact brushed-metal server core receiving a single luminous aircraft route, splitting through amber branching decision-tree structures and a small adjacent glass cache chamber. A second understated cylinder represents an audit database. Graphite and warm copper with orange highlights, architectural service-system sculpture, no brands or writing."
+    },
+    {
+      "project": "docpilot-rag",
+      "cover": "/thumbnail/generated/docpilot-rag-cover-2026-10.webp",
+      "original": "exec-d57fcf2b-191b-4d2d-af6a-0c274e6d4353.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Editorial 3D illustration with tactile materials, restrained cinematic lighting, near-black graphite setting and selective luminous accents. One recognizable focal subject, clean silhouette at thumbnail size, key subject in central 70%, both top corners quietly dark for website status badges. No text, lettering, numbers, logos, watermark or fake UI screenshots. Conceptual illustration, no suggestion of a publicly deployed product. Subject: documentation question-answering and hybrid retrieval represented by open technical reference books and a small array of translucent document sheets converging through two distinct luminous paths into a glass magnifying lens, which selects a few golden-edged source cards. Purple and cyan highlights, near-black desk, believable paper and glass, focus on finding evidence; pages are blank, no writing or fake interfaces."
+    },
+    {
+      "project": "aeroops-ml",
+      "cover": "/thumbnail/generated/aeroops-ml-cover-2026-10.webp",
+      "original": "exec-23767563-61ff-4246-a453-84e3db9941f2.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Editorial 3D illustration with tactile materials, restrained cinematic lighting, near-black graphite setting and selective luminous accents. One recognizable focal subject, clean silhouette at thumbnail size, key subject in central 70%, both top corners quietly dark for website status badges. No text, lettering, numbers, logos, watermark or fake UI screenshots. Conceptual illustration, no suggestion of a publicly deployed product. Subject: aviation machine-learning pipeline, a highly detailed miniature jet turbine cutaway next to a small silver passenger aircraft silhouette, connected to translucent layered data tiles and a restrained luminous blue prediction curve. Graphite workbench, cyan and ice-blue highlights, precise technical elegance; no airline markings."
     }
   ]
 }
