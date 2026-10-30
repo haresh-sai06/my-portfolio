@@ -5,12 +5,12 @@
     "category": "AI & ML",
     "status": "MVP",
     "summary": "Centralizes flood rescue requests with AI extraction, deduplication, a map, and volunteer coordination.",
-    "overview": "A flood rescue coordination MVP for Code for Communities 2026. It turns scattered social-media text into prioritized requests and keeps ambiguous model output visible for a human operator to review.",
+    "overview": "A flood rescue coordination MVP for Code for Communities 2026. It turns scattered social-media text into prioritized requests and keeps ambiguous model output visible for human review. Source-grounding checks drop locations, contact numbers, and coordinates absent from the input message. Repository evidence covers local workflow tests and a sample-corpus evaluation, without a field exercise or operational rescue deployment.",
     "highlights": [
       "Structured location, urgency, and request-type extraction",
       "Duplicate request grouping and severity-coded map pins",
       "Volunteer assignment, resolution, and outcome logs",
-      "A human-review queue for ambiguous requests"
+      "Source-grounding checks and a human-review queue for ambiguous requests"
     ],
     "tags": [
       "Python",
@@ -21,8 +21,119 @@
     "color": "#7DCFFF",
     "href": "/projects/reliefstream",
     "repository": "https://github.com/haresh-sai06/reliefstream",
-    "updatedAt": "2026-10-23T03:50:49Z",
+    "updatedAt": "2026-10-30T13:24:35Z",
     "thumbnail": "/thumbnail/generated/reliefstream-cover-2026-10.webp"
+  },
+  {
+    "id": "lytic-sovereign-signal",
+    "name": "Lytic Sovereign Signal",
+    "category": "Full-stack",
+    "status": "Live website",
+    "summary": "A multi-page company website with scroll-driven logistics storytelling, a product showcase, team profiles, and contact flows.",
+    "overview": "A Next.js and TypeScript website presenting Lytic and its Shift logistics offering. The implementation combines GSAP ScrollTrigger, Lenis, Motion, and Tailwind CSS with company, product, contact, and legal pages. The contact form opens an email client rather than submitting to a server-side lead service. The public website is available for review; this case study describes the website implementation, without treating its business or product marketing claims as independently verified outcomes.",
+    "highlights": [
+      "Pinned route storyboard and scroll-driven transitions",
+      "Reusable navigation, footer, page headings, and motion components",
+      "Dedicated company, Shift product, contact, and legal pages",
+      "Email-client contact form and a verified public website link"
+    ],
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "GSAP",
+      "Tailwind CSS"
+    ],
+    "color": "#97D7BD",
+    "href": "/projects/lytic-sovereign-signal",
+    "repository": "https://github.com/haresh-sai06/lytic-sovereign-signal",
+    "demoUrl": "https://lytic-web.vercel.app",
+    "updatedAt": "2026-10-29T15:35:54Z",
+    "thumbnail": "/thumbnail/generated/lytic-sovereign-signal-cover-2026-10.webp"
+  },
+  {
+    "id": "manastej-redesign",
+    "name": "Manastej Redesign",
+    "category": "Full-stack",
+    "status": "Unofficial concept",
+    "summary": "A motion-rich website redesign concept for Manastej, with responsive layouts and scroll-driven storytelling.",
+    "overview": "An unofficial redesign concept built with Next.js 15, Tailwind CSS v4, GSAP ScrollTrigger, and Lenis. It explores a mental wellness platform's visual presentation through horizontal feature panels, botanical artwork, and layered typography. The Manastej name, logo, and original copy belong to Manastej; this is a design concept, not a commissioned product or a working care service.",
+    "highlights": [
+      "Scroll-driven horizontal feature panels and depth parallax",
+      "Responsive sections with reduced-motion alternatives",
+      "Reusable motion helpers scoped to each section",
+      "Desktop, mobile, and reduced-motion screenshots in the repository"
+    ],
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "GSAP"
+    ],
+    "color": "#8FD9C3",
+    "href": "/projects/manastej-redesign",
+    "repository": "https://github.com/haresh-sai06/manastej-redesign",
+    "updatedAt": "2026-10-27T16:44:31Z",
+    "thumbnail": "/thumbnail/generated/manastej-redesign-cover-2026-10.webp"
+  },
+  {
+    "id": "llm-forgebot",
+    "name": "LLM ForgeBot",
+    "summary": "An AI builder prototype with locally validated document ingestion and experimental model-integration and training code.",
+    "category": "AI & ML",
+    "status": "Prototype",
+    "thumbnail": "/thumbnail/generated/llm-forgebot-cover-2026-10.webp",
+    "color": "#8B5CF6",
+    "tags": [
+      "React",
+      "Vite",
+      "Python",
+      "Document ingestion"
+    ],
+    "href": "/llm-forgebot",
+    "repository": "https://github.com/haresh-sai06/LLM_Forgebot",
+    "updatedAt": "2026-10-26T10:28:25Z"
+  },
+  {
+    "id": "skct-timetable",
+    "name": "SKCT Automated Timetable",
+    "summary": "A scheduling prototype with academic-record forms, constraint controls, timetable views, and conflict feedback.",
+    "category": "Full-stack",
+    "status": "Prototype",
+    "thumbnail": "/thumbnail/generated/skct-timetable-cover-2026-10.webp",
+    "color": "#3B82F6",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "jsPDF"
+    ],
+    "href": "/timetable-project",
+    "repository": "https://github.com/haresh-sai06/staff-timetable-management",
+    "updatedAt": "2026-10-26T08:17:58Z"
+  },
+  {
+    "id": "win-clicky",
+    "name": "Win-Clicky",
+    "summary": "A Tauri desktop assistant scaffold for screen questions, spoken responses, and guided cursor-based demos on Windows.",
+    "overview": "A Rust and Tauri 2 Windows assistant scaffold with a floating panel and a transparent pointing overlay. The source integrates screenshot capture, configurable LLM providers, Windows speech synthesis, and scripted or model-assisted demo walkthroughs. Vision-based features require a suitable model, and speech recognition depends on browser support. It is presented as an MVP scaffold rather than a verified packaged release.",
+    "highlights": [
+      "Floating assistant panel and transparent cursor-pointing overlay",
+      "Screenshot capture with configurable LLM providers",
+      "Windows speech synthesis and browser-dependent voice input",
+      "JSON demo scripts with explicit coordinates or model-assisted pointing"
+    ],
+    "category": "Tools & Research",
+    "status": "MVP scaffold",
+    "color": "#F97316",
+    "tags": [
+      "Rust",
+      "Tauri",
+      "Windows"
+    ],
+    "href": "/projects/win-clicky",
+    "repository": "https://github.com/haresh-sai06/Win-Clicky",
+    "updatedAt": "2026-10-24T03:30:08Z",
+    "thumbnail": "/thumbnail/generated/win-clicky-cover-2026-10.webp"
   },
   {
     "id": "aeroops-java",
@@ -46,7 +157,7 @@
     "color": "#E8AA74",
     "href": "/projects/aeroops-java",
     "repository": "https://github.com/haresh-sai06/aeroops-java",
-    "updatedAt": "2026-10-23T02:26:20Z",
+    "updatedAt": "2026-10-24T03:13:16Z",
     "thumbnail": "/thumbnail/generated/aeroops-java-cover-2026-10.webp"
   },
   {
@@ -124,30 +235,6 @@
     "thumbnail": "/thumbnail/generated/aeroops-ml-cover-2026-10.webp"
   },
   {
-    "id": "win-clicky",
-    "name": "Win-Clicky",
-    "summary": "A Tauri desktop assistant scaffold for screen questions, spoken responses, and guided cursor-based demos on Windows.",
-    "overview": "A Rust and Tauri 2 Windows assistant scaffold with a floating panel and a transparent pointing overlay. The source integrates screenshot capture, configurable LLM providers, Windows speech synthesis, and scripted or model-assisted demo walkthroughs. Vision-based features require a suitable model, and speech recognition depends on browser support. It is presented as an MVP scaffold rather than a verified packaged release.",
-    "highlights": [
-      "Floating assistant panel and transparent cursor-pointing overlay",
-      "Screenshot capture with configurable LLM providers",
-      "Windows speech synthesis and browser-dependent voice input",
-      "JSON demo scripts with explicit coordinates or model-assisted pointing"
-    ],
-    "category": "Tools & Research",
-    "status": "MVP scaffold",
-    "color": "#F97316",
-    "tags": [
-      "Rust",
-      "Tauri",
-      "Windows"
-    ],
-    "href": "/projects/win-clicky",
-    "repository": "https://github.com/haresh-sai06/Win-Clicky",
-    "updatedAt": "2026-10-19T12:29:08Z",
-    "thumbnail": "/thumbnail/generated/win-clicky-cover-2026-10.webp"
-  },
-  {
     "id": "synapse-erp",
     "name": "Synapse ERP",
     "category": "AI & ML",
@@ -196,31 +283,6 @@
     "repository": "https://github.com/haresh-sai06/crop-disease-concept-net",
     "updatedAt": "2026-10-19T11:19:25Z",
     "thumbnail": "/thumbnail/generated/crop-disease-cover-2026-10.webp"
-  },
-  {
-    "id": "manastej-redesign",
-    "name": "Manastej Redesign",
-    "category": "Full-stack",
-    "status": "Unofficial concept",
-    "summary": "A motion-rich website redesign concept for Manastej, with responsive layouts and scroll-driven storytelling.",
-    "overview": "An unofficial redesign concept built with Next.js 15, Tailwind CSS v4, GSAP ScrollTrigger, and Lenis. It explores a mental wellness platform's visual presentation through horizontal feature panels, botanical artwork, and layered typography. The Manastej name, logo, and original copy belong to Manastej; this is a design concept, not a commissioned product or a working care service.",
-    "highlights": [
-      "Scroll-driven horizontal feature panels and depth parallax",
-      "Responsive sections with reduced-motion alternatives",
-      "Reusable motion helpers scoped to each section",
-      "Desktop, mobile, and reduced-motion screenshots in the repository"
-    ],
-    "tags": [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "GSAP"
-    ],
-    "color": "#8FD9C3",
-    "href": "/projects/manastej-redesign",
-    "repository": "https://github.com/haresh-sai06/manastej-redesign",
-    "updatedAt": "2026-10-16T15:01:01Z",
-    "thumbnail": "/thumbnail/generated/manastej-redesign-cover-2026-10.webp"
   },
   {
     "id": "clearstudy",
@@ -386,21 +448,6 @@
     "thumbnail": "/thumbnail/generated/hackaura-cover-2026-10.webp"
   },
   {
-    "id": "llm-forgebot",
-    "name": "LLM ForgeBot",
-    "summary": "Multi-purpose AI toolkit with LLM-powered automation and analytics.",
-    "category": "AI & ML",
-    "status": "Project case study",
-    "thumbnail": "/thumbnail/generated/llm-forgebot-cover-2026-10.webp",
-    "color": "#8B5CF6",
-    "tags": [
-      "LLM",
-      "Next.js",
-      "Automation"
-    ],
-    "href": "/llm-forgebot"
-  },
-  {
     "id": "ai-study-hub",
     "name": "AI Study Hub",
     "summary": "Turns raw notes, PDFs, and presentations into structured, exam-oriented study kits.",
@@ -471,20 +518,6 @@
       "Real-time"
     ],
     "href": "/esports-project"
-  },
-  {
-    "id": "skct-timetable",
-    "name": "SKCT Automated Timetable",
-    "summary": "Automated timetable generation to resolve scheduling conflicts and allocate resources.",
-    "category": "Full-stack",
-    "status": "Project case study",
-    "thumbnail": "/thumbnail/generated/skct-timetable-cover-2026-10.webp",
-    "color": "#3B82F6",
-    "tags": [
-      "Optimization",
-      "TypeScript"
-    ],
-    "href": "/timetable-project"
   },
   {
     "id": "trip-bharat",

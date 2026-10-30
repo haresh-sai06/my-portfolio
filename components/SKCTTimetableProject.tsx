@@ -8,126 +8,194 @@ import TimetableThumbnail from "@/public/thumbnail/generated/skct-timetable-cove
 
 // SKCT College Timetable Management System Project Data
 const SKCT_TIMETABLE_PROJECT = {
-  hero: {
-    title: "SKCT Timetable Management System",
-    descriptor: "An advanced, automated college timetable management system tailored for Sri Krishna College of Technology (SKCT), Coimbatore   featuring conflict-free scheduling, role-based access, and a modern, mobile-optimized interface.",
-    status: "Prototype - Ongoing",
-    thumbnail: TimetableThumbnail
+  "hero": {
+    "title": "SKCT Automated Timetable",
+    "descriptor": "A scheduling prototype with constraint controls, conflict feedback, and local component checks",
+    "status": "Prototype · Local component checks",
+    "thumbnail": TimetableThumbnail
   },
-  overview: {
-    what: "A comprehensive web application for managing college timetables at Sri Krishna College of Technology, supporting department-wise and year-wise scheduling, automated conflict resolution, staff workload management, and real-time PDF exports.",
-    why: "Manual timetable creation in colleges is time-consuming and error-prone. This system automates scheduling while respecting academic constraints, reducing administrative burden and ensuring fair staff allocation.",
-    problem: "Traditional timetable management leads to conflicts (overlapping classes, overworked staff), lack of transparency, and difficulty in handling complex constraints like Anna University’s semester structure and staff workload limits."
+  "overview": {
+    "what": "A React and Supabase prototype with academic filters, staff and classroom forms, timetable views, and PDF export components.",
+    "why": "Academic schedules need explicit staff, room, and teaching preferences with visible conflict feedback.",
+    "problem": "Competing scheduling constraints can be difficult to track and review manually."
   },
-  capabilities: [
+  "capabilities": [
     {
-      title: "Automated Scheduling",
-      description: "Generates conflict-free timetables using constraint-based algorithms respecting staff hours, classroom availability, and student group constraints.",
-      icon: "⚙️"
+      "title": "Scheduling Controls",
+      "description": "Forms expose department, semester, lab-duration, workload, and time-preference inputs.",
+      "icon": "⚙️"
     },
     {
-      title: "Conflict Detection & Resolution",
-      description: "Real-time detection of staff, classroom, and student overlaps with automated suggestions and manual overrides.",
-      icon: "🔍"
+      "title": "Conflict Feedback",
+      "description": "The interface receives candidate timetable and conflict results; validator utilities have local tests.",
+      "icon": "🔍"
     },
     {
-      title: "Role-Based Access",
-      description: "Admins manage data; staff and users view timetables and raise issues via a dedicated reporting system.",
-      icon: "🔐"
+      "title": "Academic Records",
+      "description": "React forms and Supabase queries organize staff, subjects, and classrooms.",
+      "icon": "👥"
     },
     {
-      title: "PDF Export with Attribution",
-      description: "Export department-wise timetables as branded PDFs with user attribution ('Downloaded by: Username').",
-      icon: "📄"
+      "title": "PDF Components",
+      "description": "Timetable export components use jsPDF and jspdf-autotable; operational use is not established.",
+      "icon": "📄"
     },
     {
-      title: "Staff & Classroom Management",
-      description: "Full CRUD operations for staff (with role-based workload limits) and classrooms (lecture halls, labs).",
-      icon: "👥"
+      "title": "Schedule Views",
+      "description": "Department and year filters, grids, and previews support candidate schedule review.",
+      "icon": "🗓️"
     },
     {
-      title: "Mobile-First Responsive Design",
-      description: "Touch-friendly interface with swipe gestures, collapsible menus, and optimized layouts for all devices.",
-      icon: "📱"
+      "title": "Status and Motion",
+      "description": "Local utilities handle generating and result states, including reduced-motion behavior.",
+      "icon": "📱"
     }
   ],
-  architecture: {
-    frontend: {
-      title: "Frontend",
-      description: "Modern, animated React application with smooth transitions and responsive design",
-      components: ["React 18", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Next.js"]
+  "architecture": {
+    "frontend": {
+      "title": "Frontend",
+      "description": "React and TypeScript built with Vite",
+      "components": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion"
+      ]
     },
-    backend: {
-      title: "Backend",
-      description: "Secure API layer with real-time database operations and authentication",
-      components: ["Supabase", "PostgreSQL", "Authentication", "Storage", "Realtime"]
+    "backend": {
+      "title": "Data Integration",
+      "description": "Supabase client calls load and update application records",
+      "components": [
+        "Supabase client",
+        "PostgreSQL",
+        "Query feedback",
+        "Application forms"
+      ]
     },
-    ai: {
-      title: "Scheduling Engine",
-      description: "Custom constraint satisfaction algorithm for automated timetable generation",
-      components: ["JavaScript CSP Logic", "Workload Balancing", "Conflict Resolution", "Priority Rules"]
+    "ai": {
+      "title": "Scheduling Logic",
+      "description": "Preferences, validation utilities, and conflict-result UI",
+      "components": [
+        "Constraint inputs",
+        "Workload preferences",
+        "Conflict feedback",
+        "Validator tests"
+      ]
     },
-    database: {
-      title: "Database",
-      description: "Relational structure with proper indexing for fast queries and data integrity",
-      components: ["Supabase Postgres", "Foreign Keys", "Indexes", "Row Level Security"]
+    "database": {
+      "title": "Academic Records",
+      "description": "Source components organize scheduling records",
+      "components": [
+        "Subjects",
+        "Staff",
+        "Classrooms",
+        "Timetable entries"
+      ]
     },
-    hosting: {
-      title: "Deployment",
-      description: "Fast, scalable hosting with edge delivery",
-      components: ["Vercel", "Supabase Hosting", "CDN", "SSL"]
+    "hosting": {
+      "title": "Validation Boundary",
+      "description": "Recorded evidence covers local component checks rather than operational deployment",
+      "components": [
+        "Local unit checks",
+        "Motion tests",
+        "Browser validation pending",
+        "User trial pending"
+      ]
     }
   },
-  techStack: [
-    { category: "Frontend", items: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Next.js"] },
-    { category: "Backend & DB", items: ["Supabase", "PostgreSQL", "Authentication", "Storage"] },
-    { category: "Scheduling Logic", items: ["Constraint Algorithms", "Conflict Detection", "Priority Rules"] },
-    { category: "PDF Generation", items: ["jsPDF", "jspdf-autotable"] },
-    { category: "Deployment", items: ["Vercel", "Supabase", "CDN"] }
-  ],
-  challenges: [
+  "techStack": [
     {
-      title: "Conflict-Free Automated Scheduling",
-      problem: "Generating valid timetables satisfying multiple constraints (staff hours, classroom availability, student groups) is computationally complex.",
-      solution: "Implemented a custom constraint satisfaction algorithm with backtracking and priority rules for morning theory/afternoon lab preferences.",
-      learning: "Effective scheduling requires careful constraint modeling and iterative refinement   automation saves hours of manual work."
+      "category": "Frontend",
+      "items": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion"
+      ]
     },
     {
-      title: "Real-Time Data Sync & Auth",
-      problem: "Multiple users (admins, staff) need consistent, secure access to live timetable data without conflicts.",
-      solution: "Leveraged Supabase’s real-time capabilities, row-level security, and JWT authentication for seamless, secure updates.",
-      learning: "Supabase simplifies full-stack development with powerful realtime and auth features out of the box."
+      "category": "Data Layer",
+      "items": [
+        "Supabase",
+        "PostgreSQL",
+        "Client queries"
+      ]
     },
     {
-      title: "Mobile UX for Academic Use",
-      problem: "Faculty and admins use the system on varied devices; interface must be intuitive on phones and tablets.",
-      solution: "Built mobile-first responsive design with swipe gestures, collapsible menus, and touch-friendly controls using Tailwind and Framer Motion.",
-      learning: "Great academic tools must prioritize accessibility and ease-of-use across all devices."
+      "category": "Scheduling UI",
+      "items": [
+        "Constraint preferences",
+        "Conflict feedback",
+        "Validation"
+      ]
+    },
+    {
+      "category": "PDF Components",
+      "items": [
+        "jsPDF",
+        "jspdf-autotable"
+      ]
+    },
+    {
+      "category": "Validation",
+      "items": [
+        "Node unit tests",
+        "Reduced-motion checks",
+        "Local prototype"
+      ]
     }
   ],
-  useCases: [
-    { audience: "College Administrators", needs: "Automated timetable generation, conflict resolution, staff/classroom management, and PDF exports" },
-    { audience: "Teaching Faculty", needs: "View personal schedules, track workload, and raise timetable-related issues" },
-    { audience: "Department Coordinators", needs: "Department-wise timetable views, year/semester filtering, and real-time updates" },
-    { audience: "Students (Future Enhancement)", needs: "View class schedules and receive notifications (planned)" }
+  "challenges": [
+    {
+      "title": "Explicit Constraints",
+      "problem": "Staff, room, and teaching preferences can compete.",
+      "solution": "Expose preferences in the form and display conflicts alongside candidate results.",
+      "learning": "Visible review is more useful than an unsupported guarantee of conflict-free output."
+    },
+    {
+      "title": "Data-dependent Forms",
+      "problem": "Scheduling inputs depend on academic records that may fail to load.",
+      "solution": "Handle Supabase query results and loading feedback in the scheduling form.",
+      "learning": "Component behavior and operational workflows require separate validation."
+    },
+    {
+      "title": "Clear Motion States",
+      "problem": "Initial, generating, and result states must be distinguishable.",
+      "solution": "Local utilities and tests cover status branches and reduced-motion behavior.",
+      "learning": "Component tests do not replace browser or user evaluation."
+    }
   ],
-  outcome: {
-    achievements: [
-      "Fully automated, conflict-free timetable generation implemented",
-      "Real-time PDF export with user attribution and SKCT branding",
-      "Role-based access control with secure authentication",
-      "Mobile-optimized interface with smooth animations and intuitive navigation",
-      "Comprehensive staff, classroom, and issue management system"
+  "useCases": [
+    {
+      "audience": "Scheduling Experiments",
+      "needs": "Explore how staff, rooms, subjects, and constraints fit together"
+    },
+    {
+      "audience": "Academic Coordinators",
+      "needs": "Review candidate schedules and conflicts in a prototype"
+    },
+    {
+      "audience": "Interface Evaluation",
+      "needs": "Validate controls and export flows in a browser before operational adoption"
+    }
+  ],
+  "outcome": {
+    "achievements": [
+      "Scheduling forms and conflict-result components are present in source",
+      "Validator and motion utilities have local test coverage",
+      "PDF export components are included",
+      "Browser trials and operational deployment remain unverified"
     ],
-    skills: [
-      "Full-stack development with Next.js and Supabase",
-      "Algorithm design for constraint-based scheduling",
-      "Advanced UI/UX with Framer Motion and GSAP animations",
-      "PDF generation with jsPDF and branding",
-      "Responsive and accessible design principles"
+    "skills": [
+      "React and TypeScript interfaces",
+      "Scheduling constraint modeling",
+      "Supabase client integration",
+      "PDF components",
+      "Reduced-motion status feedback"
     ],
-    significance:
-      "This project transforms a traditionally tedious administrative task into an efficient, reliable, and user-friendly system. It demonstrates how thoughtful technology can streamline academic operations, ensure fairness in workload distribution, and enhance institutional efficiency   all while delivering a polished, professional experience aligned with SKCT's standards."
+    "significance": "This is an academic scheduling prototype. Current repository evidence covers local component behavior, without a recorded browser trial, user study, or operational deployment."
   }
 };
 
@@ -192,7 +260,7 @@ function ProjectOverview() {
           </p>
         </div>
         <div className="bg-red-500/10 rounded-2xl p-8 border border-red-500/30">
-          <h3 className="text-xl font-semibold text-red-400 mb-4">Problem Solved</h3>
+          <h3 className="text-xl font-semibold text-red-400 mb-4">Problem Addressed</h3>
           <p className="text-red-300 leading-relaxed">
             {SKCT_TIMETABLE_PROJECT.overview.problem}
           </p>
@@ -421,7 +489,7 @@ function OutcomeAndImpact() {
           </div>
 
           <div className="bg-white/5 rounded-2xl p-10 border border-white/10">
-            <h3 className="text-3xl font-bold text-cyan-300 mb-8">Skills Strengthened</h3>
+            <h3 className="text-3xl font-bold text-cyan-300 mb-8">Engineering Focus</h3>
             <ul className="space-y-4 text-lg">
               {SKCT_TIMETABLE_PROJECT.outcome.skills.map((skill, i) => (
                 <motion.li
@@ -441,7 +509,7 @@ function OutcomeAndImpact() {
         </div>
 
         <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl p-10 border border-blue-500/30 flex flex-col justify-center">
-          <h3 className="text-3xl font-bold text-blue-300 mb-8">Why This Project Matters</h3>
+          <h3 className="text-3xl font-bold text-blue-300 mb-8">Validation Boundary</h3>
           <p className="text-xl text-blue-200 leading-relaxed">
             {SKCT_TIMETABLE_PROJECT.outcome.significance}
           </p>
@@ -481,6 +549,11 @@ export default function SKCTTimetableProject() {
       <div className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <ProjectHero />
+          <p className="mb-16 text-center">
+            <a href="https://github.com/haresh-sai06/staff-timetable-management/blob/main/docs/TRL-ASSESSMENT.md" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 underline underline-offset-4 hover:text-white">
+              Source and validation notes ↗
+            </a>
+          </p>
           <ProjectOverview />
           <SystemCapabilities />
           <ArchitectureSnapshot />

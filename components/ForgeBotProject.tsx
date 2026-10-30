@@ -8,124 +8,193 @@ import ForgebotThumbnail from "@/public/thumbnail/generated/llm-forgebot-cover-2
 
 // Project data structure
 const FORGEBOT_PROJECT = {
-  hero: {
-    title: "LLM ForgeBot",
-    descriptor: "A unified AI toolkit for automation, analytics, and LLM-powered workflows",
-    status: "Completed · Prototype",
-    thumbnail: ForgebotThumbnail
+  "hero": {
+    "title": "LLM ForgeBot",
+    "descriptor": "An AI workflow prototype with a locally validated document-ingest step",
+    "status": "Prototype · Ingest validated locally",
+    "thumbnail": ForgebotThumbnail
   },
-  overview: {
-    what: "LLM ForgeBot is a multi-purpose AI toolkit that consolidates essential tools LLM interface, text-to-voice conversion, data analytics, and SQL automation into a single web application.",
-    why: "The market needed a unified solution to eliminate tool fragmentation, reduce costs, and leverage AI capabilities without the complexity of managing multiple specialized applications.",
-    problem: "Businesses and developers face fragmented AI tools across different platforms, leading to inefficient workflows, high licensing costs, and context switching between disconnected applications."
+  "overview": {
+    "what": "A React and Vite builder with Python ingestion and experimental AI tooling. The recorded browser check covers text upload, extraction, and chunk feedback.",
+    "why": "Explore a shared interface for document preparation and model configuration before separate inference or training runs.",
+    "problem": "Uploaded text and extraction failures need to be visible before documents enter an AI workflow."
   },
-  capabilities: [
+  "capabilities": [
     {
-      title: "LLM Interface",
-      description: "Natural language conversation interface powered by LLaMA models with context awareness and intelligent response generation.",
-      icon: "💬"
+      "title": "Document Ingest",
+      "description": "A local HTTP service extracts and chunks documents. A text-file upload was recorded in desktop Chrome.",
+      "icon": "📄"
     },
     {
-      title: "Text-to-Voice",
-      description: "High-quality text-to-speech conversion supporting multiple languages and customizable voice parameters.",
-      icon: "🔊"
+      "title": "Upload Feedback",
+      "description": "The builder displays the extracted excerpt, chunk count, and upload status.",
+      "icon": "🔍"
     },
     {
-      title: "Data Analytics Tools",
-      description: "Comprehensive analytics dashboard with real-time data visualization and AI-powered insights generation.",
-      icon: "📊"
+      "title": "Builder Interface",
+      "description": "React and TypeScript screens organize configuration and document preparation into steps.",
+      "icon": "🎛️"
     },
     {
-      title: "SQL Automation",
-      description: "Automated SQL query generation from Excel spreadsheets with intelligent schema detection and optimization.",
-      icon: "🗃️"
+      "title": "AI Integration Code",
+      "description": "LLM, voice, and image integrations require provider setup and separate runtime validation.",
+      "icon": "💬"
     },
     {
-      title: "AI Predictions",
-      description: "Machine learning models for trend analysis and predictive analytics across integrated data sources.",
-      icon: "🤖"
+      "title": "Analytics Scaffold",
+      "description": "The backend includes analysis and SQLite demo code, without a verified business-impact claim.",
+      "icon": "📊"
     },
     {
-      title: "Unified Dashboard",
-      description: "Centralized interface providing seamless access to all tools with consistent user experience.",
-      icon: "🎛️"
+      "title": "Training Scripts",
+      "description": "SFT and LoRA scripts are present. The ingest check did not train a model.",
+      "icon": "🤖"
     }
   ],
-  architecture: {
-    frontend: {
-      title: "Frontend",
-      description: "React + TypeScript application with responsive design and real-time updates",
-      components: ["React 18", "TypeScript", "Tailwind CSS", "Framer Motion"]
+  "architecture": {
+    "frontend": {
+      "title": "Frontend",
+      "description": "React and TypeScript served by Vite",
+      "components": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS"
+      ]
     },
-    backend: {
-      title: "Backend",
-      description: "Python FastAPI server handling authentication, request routing, and business logic",
-      components: ["Python", "FastAPI", "RESTful APIs", "JWT Authentication"]
+    "backend": {
+      "title": "Ingest Service",
+      "description": "A local standard-library HTTP server calls the extraction module",
+      "components": [
+        "Python",
+        "ThreadingHTTPServer",
+        "Extraction",
+        "Chunk feedback"
+      ]
     },
-    ai: {
-      title: "AI / ML Layer",
-      description: "LLaMA model integration with context management and response optimization",
-      components: ["LLaMA Models", "Text Processing", "Context Management", "Response Caching"]
+    "ai": {
+      "title": "Experimental AI Code",
+      "description": "Model integrations and training scripts require separate validation",
+      "components": [
+        "LLM integrations",
+        "SFT scripts",
+        "LoRA scripts",
+        "Provider configuration"
+      ]
     },
-    database: {
-      title: "Database",
-      description: "Firebase for user data, analytics storage, and real-time synchronization",
-      components: ["Firebase Firestore", "Real-time Sync", "Authentication", "Cloud Functions"]
+    "database": {
+      "title": "Prototype Storage",
+      "description": "The broader backend includes a SQLite demo database and local artifacts",
+      "components": [
+        "SQLite",
+        "SQLAlchemy",
+        "Local files",
+        "Demo data"
+      ]
     },
-    apis: {
-      title: "APIs",
-      description: "RESTful endpoints connecting frontend services with backend AI processing",
-      components: ["REST API", "WebSocket", "Rate Limiting", "Error Handling"]
+    "apis": {
+      "title": "Verified API Scope",
+      "description": "The recorded browser flow uses ingestion endpoints without training",
+      "components": [
+        "GET /health",
+        "POST /ingest",
+        "Local CORS scope",
+        "Upload size limit"
+      ]
     }
   },
-  techStack: [
-    { category: "Frontend", items: ["React", "TypeScript", "Tailwind CSS"] },
-    { category: "Backend", items: ["Python", "FastAPI", "REST APIs"] },
-    { category: "Database", items: ["Firebase", "Firestore", "Authentication"] },
-    { category: "AI/ML", items: ["LLaMA Models", "Analytics Tools", "Text Processing"] },
-    { category: "Hosting", items: ["Vercel", "Free Tier", "CDN"] }
-  ],
-  challenges: [
+  "techStack": [
     {
-      title: "Performance Optimization",
-      problem: "LLM response times initially exceeded 10 seconds, making the interface feel sluggish.",
-      solution: "Implemented request batching, response caching, and streaming responses to reduce perceived latency by 70%.",
-      learning: "Learned that perceived performance is as important as actual performance in AI applications."
+      "category": "Frontend",
+      "items": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS"
+      ]
     },
     {
-      title: "Context Management",
-      problem: "LLaMA models lost context after 8-10 exchanges, breaking conversation continuity.",
-      solution: "Developed a context summarization system that maintains conversation history while staying within token limits.",
-      learning: "Understanding token economics and context window management is critical for production LLM applications."
+      "category": "Ingestion",
+      "items": [
+        "Python",
+        "HTTP server",
+        "Text extraction",
+        "Chunking"
+      ]
     },
     {
-      title: "Resource Constraints",
-      problem: "Free tier hosting limitations caused frequent timeouts during peak usage.",
-      solution: "Implemented intelligent queuing, request prioritization, and graceful degradation strategies.",
-      learning: "Building resilient systems requires planning for failure scenarios and resource limitations."
+      "category": "Experimental Backend",
+      "items": [
+        "FastAPI source",
+        "SQLite",
+        "SQLAlchemy"
+      ]
+    },
+    {
+      "category": "Training Code",
+      "items": [
+        "PyTorch",
+        "SFT",
+        "LoRA"
+      ]
+    },
+    {
+      "category": "Validation",
+      "items": [
+        "Local ingestion",
+        "Browser upload feedback",
+        "Component tests"
+      ]
     }
   ],
-  useCases: [
-    { audience: "Students", needs: "AI tools for research, content creation, and learning without subscription costs" },
-    { audience: "Engineers", needs: "Integrated development tools with automation and analytics capabilities" },
-    { audience: "Developers", needs: "Unified platform for testing AI features and building prototypes" },
-    { audience: "Small Businesses", needs: "Cost-effective AI automation without enterprise software complexity" }
+  "challenges": [
+    {
+      "title": "Separating Ingest from Training",
+      "problem": "A successful upload does not establish a completed training run.",
+      "solution": "The local ingest service returns extraction results and explicitly does not train.",
+      "learning": "Validation evidence should name the exact workflow exercised."
+    },
+    {
+      "title": "Inspectable Upload Results",
+      "problem": "Users need to see what text was recovered from their files.",
+      "solution": "Show the extracted excerpt, status, and chunk count after the ingestion call.",
+      "learning": "Visible feedback supports review before downstream processing."
+    },
+    {
+      "title": "Evidence Boundaries",
+      "problem": "Integration scripts alone do not establish an operational AI service.",
+      "solution": "Describe the browser ingest check separately from experimental model integrations.",
+      "learning": "User trials and model execution require separate evidence."
+    }
   ],
-  outcome: {
-    achievements: [
-      "Fully functional prototype with all core features implemented",
-      "80% cost reduction compared to using separate specialized tools",
-      "Scalable architecture ready for production deployment",
-      "Successful integration of 6 distinct AI capabilities in one platform"
+  "useCases": [
+    {
+      "audience": "Document Preparation",
+      "needs": "Inspect extracted text and chunk feedback locally"
+    },
+    {
+      "audience": "AI Workflow Experiments",
+      "needs": "Explore builder and integration code after runtime configuration"
+    },
+    {
+      "audience": "Training Research",
+      "needs": "Review training scripts separately from the validated ingestion path"
+    }
+  ],
+  "outcome": {
+    "achievements": [
+      "Repository evidence records a desktop-browser text ingest check",
+      "The local endpoint returns extracted content and chunk counts",
+      "The repository records ingestion and upload-motion checks",
+      "Model training and independent-user trials remain unverified"
     ],
-    skills: [
-      "Advanced AI/ML model integration in production environments",
-      "Full-stack system architecture and API design",
-      "Performance optimization for AI-powered applications",
-      "Debugging complex distributed systems with AI components"
+    "skills": [
+      "Document ingestion feedback",
+      "React and TypeScript interfaces",
+      "Separating UI and model validation",
+      "Documenting prototype boundaries"
     ],
-    significance:
-      "This project demonstrates the ability to design and build complex AI systems that solve real-world problems. The unified approach to AI tool integration addresses clear market gaps while maintaining engineering excellence and scalability."
+    "significance": "The recorded validation covers document ingestion in a local desktop browser. It does not establish model training, production deployment, measured cost savings, or operational performance gains."
   }
 };
 
@@ -190,7 +259,7 @@ function ProjectOverview() {
           </p>
         </div>
         <div className="bg-red-500/5 rounded-lg p-8 border border-red-500/20">
-          <h3 className="text-xl font-semibold text-red-400 mb-4">Problem Solved</h3>
+          <h3 className="text-xl font-semibold text-red-400 mb-4">Problem Addressed</h3>
           <p className="text-red-300 leading-relaxed">
             {FORGEBOT_PROJECT.overview.problem}
           </p>
@@ -208,7 +277,7 @@ function SystemCapabilities() {
       transition={{ duration: 0.8, delay: 0.2 }}
       className="mb-20"
     >
-      <h2 className="text-4xl font-bold text-white/90 mb-12">System Capabilities</h2>
+      <h2 className="text-4xl font-bold text-white/90 mb-12">Prototype Scope</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {FORGEBOT_PROJECT.capabilities.map((capability, index) => (
           <motion.div
@@ -397,11 +466,11 @@ function OutcomeAndImpact() {
       transition={{ duration: 0.8, delay: 0.7 }}
       className="mb-20"
     >
-      <h2 className="text-4xl font-bold text-white/90 mb-12">Outcome & Impact</h2>
+      <h2 className="text-4xl font-bold text-white/90 mb-12">Scope & Validation</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-8">
           <div className="bg-green-500/5 rounded-lg p-8 border border-green-500/20">
-            <h3 className="text-2xl font-semibold text-green-400 mb-6">Achievements</h3>
+            <h3 className="text-2xl font-semibold text-green-400 mb-6">Verified Scope</h3>
             <ul className="space-y-3">
               {FORGEBOT_PROJECT.outcome.achievements.map((achievement, index) => (
                 <li key={index} className="flex items-start space-x-3">
@@ -412,7 +481,7 @@ function OutcomeAndImpact() {
             </ul>
           </div>
           <div className="bg-white/5 rounded-lg p-8 border border-white/10">
-            <h3 className="text-2xl font-semibold text-white/80 mb-6">Skills Gained</h3>
+            <h3 className="text-2xl font-semibold text-white/80 mb-6">Engineering Focus</h3>
             <ul className="space-y-3">
               {FORGEBOT_PROJECT.outcome.skills.map((skill, index) => (
                 <li key={index} className="flex items-start space-x-3">
@@ -424,7 +493,7 @@ function OutcomeAndImpact() {
           </div>
         </div>
         <div className="bg-purple-500/5 rounded-lg p-8 border border-purple-500/20">
-          <h3 className="text-2xl font-semibold text-purple-400 mb-6">Why This Matters</h3>
+          <h3 className="text-2xl font-semibold text-purple-400 mb-6">Validation Boundary</h3>
           <p className="text-purple-300 leading-relaxed text-lg">
             {FORGEBOT_PROJECT.outcome.significance}
           </p>
@@ -463,6 +532,11 @@ export default function ForgeBotProject() {
       <div className="relative py-20">
         <div className="max-w-6xl mx-auto px-6">
           <ProjectHero />
+          <p className="mb-16 text-center">
+            <a href="https://github.com/haresh-sai06/LLM_Forgebot/blob/main/docs/TRL-ASSESSMENT.md" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 underline underline-offset-4 hover:text-white">
+              Source and validation notes ↗
+            </a>
+          </p>
           <ProjectOverview />
           <SystemCapabilities />
           <ArchitectureSnapshot />

@@ -4,12 +4,12 @@ import SKCTTimetableProject from "@/components/SKCTTimetableProject";
 export const metadata: Metadata = {
   title: "SKCT Automated Timetable",
   description:
-    "Automated timetable generation system for SKCT that eliminates manual scheduling conflicts and ensures optimal resource allocation. Case study by Haresh Sainaath.",
+    "A React scheduling prototype with constraint controls, timetable views, and local component checks. Case study by Haresh Sainaath S.",
   alternates: { canonical: "/timetable-project" },
   openGraph: {
     title: "SKCT Automated Timetable - Haresh Sainaath",
     description:
-      "Automated scheduling system that removes manual conflicts and optimizes resource allocation.",
+      "An academic scheduling prototype with constraint controls, timetable views, and local component checks.",
     url: "/timetable-project",
   },
 };
