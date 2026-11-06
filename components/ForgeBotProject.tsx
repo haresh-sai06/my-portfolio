@@ -22,7 +22,7 @@ const FORGEBOT_PROJECT = {
   "capabilities": [
     {
       "title": "Document Ingest",
-      "description": "A local HTTP service extracts and chunks documents. A text-file upload was recorded in desktop Chrome.",
+      "description": "A local HTTP service extracts and chunks documents, retaining short non-empty notes. A text-file upload was recorded in desktop Chrome.",
       "icon": "📄"
     },
     {
@@ -185,7 +185,7 @@ const FORGEBOT_PROJECT = {
     "achievements": [
       "Repository evidence records a desktop-browser text ingest check",
       "The local endpoint returns extracted content and chunk counts",
-      "The repository records ingestion and upload-motion checks",
+      "Regression coverage includes short-note chunk retention and upload motion",
       "Model training and independent-user trials remain unverified"
     ],
     "skills": [

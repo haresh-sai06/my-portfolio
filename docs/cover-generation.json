@@ -183,6 +183,22 @@
       "width": 1586,
       "height": 992,
       "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Create an editorial 3D illustration with tactile paper, brushed metal and translucent glass, restrained cinematic lighting, a near-black graphite setting, mint and warm ivory highlights. Subject: a logistics-oriented business website represented by an architectural arrangement of dispatch-document cards, a miniature delivery truck on a luminous route with three stopping points, and clean layered page panels. One strong focal subject, clear silhouette readable at thumbnail size. Keep important subjects in the central 70% and both top corners quietly dark for status badges. Conceptual project artwork only, no suggestion that the illustration is a real product screenshot. No people, portraits, text, lettering, numbers, logos, watermarks or fake interface screenshots."
+    },
+    {
+      "project": "mount-litera-zee-hosur",
+      "cover": "/thumbnail/generated/mount-litera-zee-hosur-cover-2026-11.webp",
+      "original": "exec-6ce21123-5030-4fec-91a3-6160882f695b.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Premium editorial 3D illustration with tactile paper, matte surfaces, translucent glass, restrained cinematic lighting, and a near-black graphite backdrop. One recognizable focal subject, readable at thumbnail size. Keep important subjects in the central 70% and both top corners quietly dark for status badges. Conceptual artwork, not an actual website screenshot or evidence of a deployed product. No people, portraits, text, letters, numbers, logos or watermarks. Subject: a school landing page centered on gradual learning, depicted as a miniature stepped learning path climbing up layered paper mountain forms toward a warm, stylized classroom pavilion. Small books, cut-paper trees, and bright geometric arch shapes along the path. Warm sunshine amber, mint, and coral accents, graphite base. Invent a generic conceptual environment rather than reproducing a real campus."
+    },
+    {
+      "project": "tracker-app",
+      "cover": "/thumbnail/generated/tracker-app-cover-2026-11.webp",
+      "original": "exec-63d53f3b-0489-4ef0-aeb6-ec45ce6240a8.png",
+      "width": 1586,
+      "height": 992,
+      "prompt": "Use case: stylized-concept. Asset type: portfolio cover, landscape 16:10. Premium editorial 3D illustration with tactile paper, matte surfaces, translucent glass, restrained cinematic lighting, and a near-black graphite backdrop. One recognizable focal subject, readable at thumbnail size. Keep important subjects in the central 70% and both top corners quietly dark for status badges. Conceptual artwork, not an actual website screenshot or evidence of a deployed product. No people, portraits, text, letters, numbers, logos or watermarks. Subject: a personal transaction tracker represented by a slim glass phone-shaped slab, two distinct streams of embossed transaction tokens flowing into a neatly organized physical ledger, and a small fan of notification-shaped cards. Emerald and cool violet accents distinguish incoming and outgoing flows, with restrained studio lighting and no legible financial information. A clean abstract product metaphor, not a fake app interface."
     }
   ]
 }

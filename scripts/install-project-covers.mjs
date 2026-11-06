@@ -36,7 +36,10 @@ for (const asset of assets) {
     throw new Error(`Not authorized to replace ${asset.id}`);
   if (!asset.source || !asset.prompt)
     throw new Error(`Missing generated image or prompt: ${asset.id}`);
-  const filename = `${asset.id}-cover-2026-10.webp`;
+  const version = asset.version ?? new Date().toISOString().slice(0, 7);
+  if (!/^\d{4}-(0[1-9]|1[0-2])$/.test(version))
+    throw new Error(`Invalid cover month for ${asset.id}: expected YYYY-MM`);
+  const filename = `${asset.id}-cover-${version}.webp`;
   const destination = resolve(output, filename);
   // Format compression only: preserve the complete generated composition and pixel dimensions.
   const metadata = await sharp(asset.source).metadata();

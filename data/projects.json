@@ -1,5 +1,141 @@
 [
   {
+    "id": "llm-forgebot",
+    "name": "LLM ForgeBot",
+    "summary": "An AI builder prototype with local document ingestion that retains short notes, plus experimental model tooling.",
+    "category": "AI & ML",
+    "status": "Prototype",
+    "thumbnail": "/thumbnail/generated/llm-forgebot-cover-2026-10.webp",
+    "color": "#8B5CF6",
+    "tags": [
+      "React",
+      "Vite",
+      "Python",
+      "Document ingestion"
+    ],
+    "href": "/llm-forgebot",
+    "repository": "https://github.com/haresh-sai06/LLM_Forgebot",
+    "updatedAt": "2026-11-04T08:16:00Z"
+  },
+  {
+    "id": "skct-timetable",
+    "name": "SKCT Automated Timetable",
+    "summary": "An academic scheduling prototype with constraint controls, conflict feedback, and break-aware lab placement.",
+    "category": "Full-stack",
+    "status": "Prototype",
+    "thumbnail": "/thumbnail/generated/skct-timetable-cover-2026-10.webp",
+    "color": "#3B82F6",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "jsPDF"
+    ],
+    "href": "/timetable-project",
+    "repository": "https://github.com/haresh-sai06/staff-timetable-management",
+    "updatedAt": "2026-11-04T08:11:13Z"
+  },
+  {
+    "id": "tracker-app",
+    "name": "Transaction Tracker",
+    "category": "Voice & Product",
+    "status": "Mobile prototype",
+    "summary": "A Flutter transaction tracker with local records, debit and credit views, and an SMS transaction parser.",
+    "overview": "A Flutter and Riverpod prototype that stores transactions, accounts, and categories locally in Hive. The dashboard presents summary and recent transaction views. SMS parser regression tests cover debit messages with a PIN reminder, a leading available balance, and messages containing only a PIN alert. Evidence covers local unit and widget checks; live bank-inbox and device validation are not established for this update.",
+    "highlights": [
+      "Hive-backed transaction, account, and category storage",
+      "Dashboard and recent records with explicit debit and credit labels",
+      "SMS amount parsing that distinguishes a transaction from a leading balance",
+      "Local parser and reduced-motion widget checks"
+    ],
+    "tags": [
+      "Flutter",
+      "Dart",
+      "Riverpod",
+      "Hive"
+    ],
+    "color": "#9AD7BA",
+    "href": "/projects/tracker-app",
+    "repository": "https://github.com/haresh-sai06/tracker-app",
+    "updatedAt": "2026-11-04T07:37:42Z",
+    "thumbnail": "/thumbnail/generated/tracker-app-cover-2026-11.webp"
+  },
+  {
+    "id": "manastej-redesign",
+    "name": "Manastej Redesign",
+    "category": "Full-stack",
+    "status": "Unofficial concept",
+    "summary": "A motion-rich website redesign concept for Manastej, with responsive layouts and scroll-driven storytelling.",
+    "overview": "An unofficial redesign concept built with Next.js 15, Tailwind CSS v4, GSAP ScrollTrigger, and Lenis. It explores a mental wellness platform's visual presentation through horizontal feature panels, botanical artwork, and layered typography. The Manastej name, logo, and original copy belong to Manastej; this is a design concept, not a commissioned product or a working care service.",
+    "highlights": [
+      "Scroll-driven horizontal feature panels and depth parallax",
+      "Responsive sections with reduced-motion alternatives",
+      "Reusable motion helpers scoped to each section",
+      "Desktop, mobile, and reduced-motion screenshots in the repository"
+    ],
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "GSAP"
+    ],
+    "color": "#8FD9C3",
+    "href": "/projects/manastej-redesign",
+    "repository": "https://github.com/haresh-sai06/manastej-redesign",
+    "updatedAt": "2026-11-02T13:07:09Z",
+    "thumbnail": "/thumbnail/generated/manastej-redesign-cover-2026-10.webp"
+  },
+  {
+    "id": "homerelay",
+    "name": "HomeRelay",
+    "category": "Full-stack",
+    "status": "Local prototype",
+    "summary": "A household task board where ownership changes only after an accepted handoff, with persistent history and six MCP tools.",
+    "overview": "A trusted-household prototype built with FastAPI, SQLite, and a browser interface. Tasks retain their current owner until the selected recipient accepts a handoff. REST and Streamable HTTP MCP expose the stored workflow with version checks for stale changes. An unchanged creation retry reuses its request ID within the current tab, and an earlier save response preserves newer draft edits. This local prototype has no individual account isolation or verified hosted application.",
+    "highlights": [
+      "Explicit propose, accept, decline, and complete task transitions",
+      "SQLite persistence and ordered task history",
+      "Version checks, tab-scoped creation retries, and retention of newer draft edits",
+      "Six Streamable HTTP MCP tools backed by stored task data"
+    ],
+    "tags": [
+      "Python",
+      "FastAPI",
+      "SQLite",
+      "MCP"
+    ],
+    "color": "#83CFE3",
+    "href": "/projects/homerelay",
+    "repository": "https://github.com/haresh-sai06/homerelay",
+    "updatedAt": "2026-11-01T09:53:50Z",
+    "thumbnail": "/thumbnail/generated/homerelay-cover-2026-10.webp"
+  },
+  {
+    "id": "mount-litera-zee-hosur",
+    "name": "Mount Litera Zee School, Hosur",
+    "category": "Full-stack",
+    "status": "Website prototype",
+    "summary": "A school landing page with a scroll-driven learning journey, campus information, and an admissions enquiry flow.",
+    "overview": "A Next.js and TypeScript landing page for Mount Litera Zee School in Hosur. Framer Motion drives the desktop learning journey, with a stacked layout for smaller screens. Sections present the school day, principal, admissions, and FAQs. Enquiry links open an email client. This case study documents the source implementation; a public deployment and operational admissions workflow have not been verified.",
+    "highlights": [
+      "Pinned desktop learning journey with a stacked mobile layout",
+      "School-day cards, principal section, and admissions information",
+      "Responsive navigation and campus-visit calls to action",
+      "Email-client enquiries rather than a server-side application form"
+    ],
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Framer Motion",
+      "Tailwind CSS"
+    ],
+    "color": "#E9C280",
+    "href": "/projects/mount-litera-zee-hosur",
+    "repository": "https://github.com/haresh-sai06/mount-litera-zee-hosur",
+    "updatedAt": "2026-11-01T02:59:51Z",
+    "thumbnail": "/thumbnail/generated/mount-litera-zee-hosur-cover-2026-11.webp"
+  },
+  {
     "id": "reliefstream",
     "name": "ReliefStream",
     "category": "AI & ML",
@@ -49,67 +185,6 @@
     "demoUrl": "https://lytic-web.vercel.app",
     "updatedAt": "2026-10-29T15:35:54Z",
     "thumbnail": "/thumbnail/generated/lytic-sovereign-signal-cover-2026-10.webp"
-  },
-  {
-    "id": "manastej-redesign",
-    "name": "Manastej Redesign",
-    "category": "Full-stack",
-    "status": "Unofficial concept",
-    "summary": "A motion-rich website redesign concept for Manastej, with responsive layouts and scroll-driven storytelling.",
-    "overview": "An unofficial redesign concept built with Next.js 15, Tailwind CSS v4, GSAP ScrollTrigger, and Lenis. It explores a mental wellness platform's visual presentation through horizontal feature panels, botanical artwork, and layered typography. The Manastej name, logo, and original copy belong to Manastej; this is a design concept, not a commissioned product or a working care service.",
-    "highlights": [
-      "Scroll-driven horizontal feature panels and depth parallax",
-      "Responsive sections with reduced-motion alternatives",
-      "Reusable motion helpers scoped to each section",
-      "Desktop, mobile, and reduced-motion screenshots in the repository"
-    ],
-    "tags": [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "GSAP"
-    ],
-    "color": "#8FD9C3",
-    "href": "/projects/manastej-redesign",
-    "repository": "https://github.com/haresh-sai06/manastej-redesign",
-    "updatedAt": "2026-10-27T16:44:31Z",
-    "thumbnail": "/thumbnail/generated/manastej-redesign-cover-2026-10.webp"
-  },
-  {
-    "id": "llm-forgebot",
-    "name": "LLM ForgeBot",
-    "summary": "An AI builder prototype with locally validated document ingestion and experimental model-integration and training code.",
-    "category": "AI & ML",
-    "status": "Prototype",
-    "thumbnail": "/thumbnail/generated/llm-forgebot-cover-2026-10.webp",
-    "color": "#8B5CF6",
-    "tags": [
-      "React",
-      "Vite",
-      "Python",
-      "Document ingestion"
-    ],
-    "href": "/llm-forgebot",
-    "repository": "https://github.com/haresh-sai06/LLM_Forgebot",
-    "updatedAt": "2026-10-26T10:28:25Z"
-  },
-  {
-    "id": "skct-timetable",
-    "name": "SKCT Automated Timetable",
-    "summary": "A scheduling prototype with academic-record forms, constraint controls, timetable views, and conflict feedback.",
-    "category": "Full-stack",
-    "status": "Prototype",
-    "thumbnail": "/thumbnail/generated/skct-timetable-cover-2026-10.webp",
-    "color": "#3B82F6",
-    "tags": [
-      "React",
-      "TypeScript",
-      "Supabase",
-      "jsPDF"
-    ],
-    "href": "/timetable-project",
-    "repository": "https://github.com/haresh-sai06/staff-timetable-management",
-    "updatedAt": "2026-10-26T08:17:58Z"
   },
   {
     "id": "win-clicky",
@@ -309,31 +384,6 @@
     "demoUrl": "https://haresh-sai06.github.io/clearstudy/",
     "updatedAt": "2026-10-13T04:39:46Z",
     "thumbnail": "/thumbnail/generated/clearstudy-cover-2026-10.webp"
-  },
-  {
-    "id": "homerelay",
-    "name": "HomeRelay",
-    "category": "Full-stack",
-    "status": "Local prototype",
-    "summary": "A household task board where ownership changes only after an accepted handoff, with persistent history and six MCP tools.",
-    "overview": "A functioning trusted-household prototype built with FastAPI, SQLite, and a browser interface. Tasks retain their current owner while a handoff is pending, and only the selected recipient can accept or decline. REST and Streamable HTTP MCP expose the same stored workflow with version checks for stale changes. It has no individual account isolation or publicly hosted application, and is presented as a local prototype rather than a production household service.",
-    "highlights": [
-      "Explicit propose, accept, decline, and complete task transitions",
-      "SQLite persistence and ordered task history",
-      "Version checks and request IDs for stale updates and duplicate retries",
-      "Six Streamable HTTP MCP tools backed by stored task data"
-    ],
-    "tags": [
-      "Python",
-      "FastAPI",
-      "SQLite",
-      "MCP"
-    ],
-    "color": "#83CFE3",
-    "href": "/projects/homerelay",
-    "repository": "https://github.com/haresh-sai06/homerelay",
-    "updatedAt": "2026-10-10T04:27:26Z",
-    "thumbnail": "/thumbnail/generated/homerelay-cover-2026-10.webp"
   },
   {
     "id": "livevolume",

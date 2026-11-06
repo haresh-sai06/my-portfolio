@@ -27,7 +27,7 @@ const SKCT_TIMETABLE_PROJECT = {
     },
     {
       "title": "Conflict Feedback",
-      "description": "The interface receives candidate timetable and conflict results; validator utilities have local tests.",
+      "description": "The interface displays candidate timetables and conflicts. Lab-slot checks reject consecutive periods separated by a scheduled break.",
       "icon": "🔍"
     },
     {
@@ -184,7 +184,7 @@ const SKCT_TIMETABLE_PROJECT = {
   "outcome": {
     "achievements": [
       "Scheduling forms and conflict-result components are present in source",
-      "Validator and motion utilities have local test coverage",
+      "Local tests cover lab-slot continuity, timetable validation, and motion utilities",
       "PDF export components are included",
       "Browser trials and operational deployment remain unverified"
     ],
