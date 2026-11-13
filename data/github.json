@@ -1,6 +1,12 @@
 {
   "repositories": [
     {
+      "name": "my-portfolio",
+      "url": "https://github.com/haresh-sai06/my-portfolio",
+      "updatedAt": "2026-11-06T08:21:41Z",
+      "language": "TypeScript"
+    },
+    {
       "name": "LLM_Forgebot",
       "url": "https://github.com/haresh-sai06/LLM_Forgebot",
       "updatedAt": "2026-11-04T08:16:00Z",
@@ -35,12 +41,6 @@
       "name": "mount-litera-zee-hosur",
       "url": "https://github.com/haresh-sai06/mount-litera-zee-hosur",
       "updatedAt": "2026-11-01T02:59:51Z",
-      "language": "TypeScript"
-    },
-    {
-      "name": "my-portfolio",
-      "url": "https://github.com/haresh-sai06/my-portfolio",
-      "updatedAt": "2026-10-30T13:35:44Z",
       "language": "TypeScript"
     },
     {
