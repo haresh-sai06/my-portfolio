@@ -10,6 +10,7 @@ const issues = [];
 const ids = new Set();
 const categories = new Set([
   "AI & ML",
+    "Design Concepts",
   "Full-stack",
   "Tools & Research",
   "Voice & Product",

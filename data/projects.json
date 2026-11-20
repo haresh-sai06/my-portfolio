@@ -1,5 +1,34 @@
 [
   {
+    "id": "manastej-redesign",
+    "name": "Manastej Redesign",
+    "category": "Design Concepts",
+    "status": "Unofficial concept",
+    "summary": "An unofficial Manastej landing page concept pairing scroll-led storytelling with a botanical 3D head and reduced-motion fallbacks.",
+    "overview": "An unofficial landing page redesign concept built with Next.js 15, React Three Fiber, Three.js, Tailwind CSS v4, GSAP, and Lenis. Its long-form visual story combines scroll-linked scenes with a botanical brain inside a glass head, backed by static and reduced-motion alternatives. The Manastej name, logo, and source copy belong to Manastej; this is an independent design concept, not a commissioned product or a working care service.",
+    "highlights": [
+      "Scroll-driven horizontal feature panels and depth parallax",
+      "Responsive sections with reduced-motion alternatives",
+      "WebGL head scene with static artwork for reduced motion or rendering failure",
+      "Desktop, mobile, and reduced-motion screenshots documented in the repository"
+    ],
+    "tags": [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "GSAP",
+      "Lenis",
+      "React Three Fiber",
+      "Three.js"
+    ],
+    "color": "#8FD9C3",
+    "href": "/projects/manastej-redesign",
+    "repository": "https://github.com/haresh-sai06/manastej-landing-page",
+    "updatedAt": "2026-11-19T17:12:04Z",
+    "thumbnail": "/thumbnail/generated/manastej-redesign-cover-2026-10.webp"
+  },
+  {
     "id": "llm-forgebot",
     "name": "LLM ForgeBot",
     "summary": "An AI builder prototype with local document ingestion that retains short notes, plus experimental model tooling.",
@@ -59,31 +88,6 @@
     "repository": "https://github.com/haresh-sai06/tracker-app",
     "updatedAt": "2026-11-04T07:37:42Z",
     "thumbnail": "/thumbnail/generated/tracker-app-cover-2026-11.webp"
-  },
-  {
-    "id": "manastej-redesign",
-    "name": "Manastej Redesign",
-    "category": "Full-stack",
-    "status": "Unofficial concept",
-    "summary": "A motion-rich website redesign concept for Manastej, with responsive layouts and scroll-driven storytelling.",
-    "overview": "An unofficial redesign concept built with Next.js 15, Tailwind CSS v4, GSAP ScrollTrigger, and Lenis. It explores a mental wellness platform's visual presentation through horizontal feature panels, botanical artwork, and layered typography. The Manastej name, logo, and original copy belong to Manastej; this is a design concept, not a commissioned product or a working care service.",
-    "highlights": [
-      "Scroll-driven horizontal feature panels and depth parallax",
-      "Responsive sections with reduced-motion alternatives",
-      "Reusable motion helpers scoped to each section",
-      "Desktop, mobile, and reduced-motion screenshots in the repository"
-    ],
-    "tags": [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "GSAP"
-    ],
-    "color": "#8FD9C3",
-    "href": "/projects/manastej-redesign",
-    "repository": "https://github.com/haresh-sai06/manastej-redesign",
-    "updatedAt": "2026-11-02T13:07:09Z",
-    "thumbnail": "/thumbnail/generated/manastej-redesign-cover-2026-10.webp"
   },
   {
     "id": "homerelay",

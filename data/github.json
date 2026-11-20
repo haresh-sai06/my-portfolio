@@ -1,9 +1,15 @@
 {
   "repositories": [
     {
+      "name": "manastej-landing-page",
+      "url": "https://github.com/haresh-sai06/manastej-landing-page",
+      "updatedAt": "2026-11-19T17:12:04Z",
+      "language": "TypeScript"
+    },
+    {
       "name": "my-portfolio",
       "url": "https://github.com/haresh-sai06/my-portfolio",
-      "updatedAt": "2026-11-06T08:21:41Z",
+      "updatedAt": "2026-11-13T06:36:41Z",
       "language": "TypeScript"
     },
     {
@@ -23,12 +29,6 @@
       "url": "https://github.com/haresh-sai06/tracker-app",
       "updatedAt": "2026-11-04T07:37:42Z",
       "language": "Dart"
-    },
-    {
-      "name": "manastej-redesign",
-      "url": "https://github.com/haresh-sai06/manastej-redesign",
-      "updatedAt": "2026-11-02T13:07:09Z",
-      "language": "TypeScript"
     },
     {
       "name": "homerelay",

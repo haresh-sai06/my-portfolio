@@ -23,6 +23,7 @@ export const PROJECTS: Project[] = catalog;
 export const CATEGORIES = [
   "All work",
   "AI & ML",
+  "Design Concepts",
   "Full-stack",
   "Tools & Research",
   "Voice & Product",
